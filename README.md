@@ -1,7 +1,11 @@
 # Official Unity3D Plugin for FOHEART Mocap Suits
 <div align=center>
-<img src=".png"/>
+<img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/img/softwareName.png"/>
 </div>
+<div align=center>
+<img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/img/AssassinsCreedUnity.jpg"/>
+</div>
+
 # 前言
 此手册介绍实时数据流驱动Unity3D模型运动，如果您对于硬件设备或者MotionVenus软件的使用有问题，请参看MotionVenus软件安装目录下的Help文件夹下的《FOHEART C1驱动安装与软件使用手册》.pdf。
 “MotionVenus”如没有特别说明，均指“FOHEART MotionVenus”。如果对该软件有任何问题可直接电子邮件反馈给我们：motionvenus@foheart.com
@@ -9,9 +13,11 @@
 方法一：打开官网 [http://www.foheart.com/resource.html](http://www.foheart.com/resource.html) 下载Unity3D插件。<br>
 方法二：git clone本库到硬盘任意位置即可。<br>
 下载后我们可以得到以下文件：
+
 <div align=center>
-<img src=".png"/>
+<img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/img/zip.png"/>
 </div>
+
 由于版本更新原因，可能文件不同。
 # 二、文件简介
 在文件目录中，其中FHMCScript是插件的代码部分，Template中是示例模型，**DefaltActor.xml**是示例模型的配置文件。
@@ -52,86 +58,116 @@
 </table>
 </div>
 需要将模型的对应骨骼名称填写在xml文件的name栏中，即可对这段骨骼进行旋转控制。<br>
-**Q&A**
+## 2.3 非标准骨骼绑定
 1. 如果模型的骨骼数目大于23段，比如背部骨骼有5段如何操作？<br>
 需要将背部骨骼中的某两段合为一段控制，由于在Unity3D中旋转父骨骼会带动它所有的子节点旋转，所以只需要将父骨骼的名称填到xml文件中即可，最后要保证所有骨骼数目小于等于23段。
 2. 如果模型的骨骼数目小于23段，比如背部骨骼只有2段如何操作？<br>
-在这种情况下需要去掉xml文件中不需要的索引，但是必须要留下Hips或Spine节点，因为这个节点还控制整个模型的位置，如果去掉整个模型就不会运动。例如以下：<br>
-&lt;bone ConnectId = "0" name = "Hips"&gt;&lt;/bone&gt;<br>
-&lt;bone ConnectId = "3" name = "Spine1"&gt;&lt;/bone&gt;<br>
+在这种情况下需要去掉xml文件中不需要的索引，但是必须要留下Hips或Spine节点，因为这个节点还控制整个模型的位置，如果去掉整个模型就不会运动。例如以下：
+
+&lt;bone ConnectId = "0" name = "Hips"&gt;&lt;/bone&gt;
+
+&lt;bone ConnectId = "3" name = "Spine1"&gt;&lt;/bone&gt;
+
 在这里首先去掉了1 2 4这三段骨骼，因为模型中没有这三段骨骼，因此也就相当于用标准模型的T8~T11段骨骼运动代替了模型的Spine1段骨骼运动，当然也可以使用索引1或2（如果模型的Spine1段骨骼比较靠下接近胯部）或4（如果模型的Spine1段骨骼比较靠上接近颈部），需要根据实际情况而定。
 # 三、插件使用流程
 下面是使动捕数据流在Unity3D中驱动任意模型的具体步骤：
 1. 新建一个Unity工程，或是使用你自己的工程。
 2. 将FHMCScript文件夹拷贝到工程目录的Assets目录下，将DefaltActor.xml 拷贝到工程根目录下。
 3. 创建一个任意一个2D或3D物体，命名为NetworkReceiver，设置scale为0.1，去掉Mesh Renderer使之基本不可见。
+
 <div align=center>
-<img src="addreceiver.png"/>
+<img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/img/addreceiver.png"/>
 </div>
+
 4. 将NetFrameDataReceiver.cs 拖放到NetworkReceiver上，在其Inspector中会显示下面属性：
+5. 
 <div align=center>
-<img src="bindreceiver.png"/>
+<img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/img/bindreceiver.png"/>
 </div>
+
 UDP Port的设定需要与MotionVenus中的设定相同，如果在MotionVenus中没有设置远程地址，可以在IP地址栏中输入远程地址的IP，在端口中输入远程地址的端口，然后点击添加按钮，这个地址就被添加到了发送列表。
+
 <div align=center>
-<img src="mvremoteipport.png"/>
+<img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/img/mvremoteipport.png"/>
 </div>
+
 Position、Euler、Quat的设定需要与MotionVenus中的转发规则设置中位移、欧拉角、四元数的选择保持一致，例如：
+
 <div align=center>
-<img src="mvtransrule.png"/>
+<img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/img/mvtransrule.png"/>
 </div>
+
 5. 将Template文件夹中的FoActorRig.fbx拖放到场景中，并且添加FoheartModel.cs为Component，最终显示如下：
+
 <div align=center>
-<img src="bindmodel.png"/>
+<img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/img/bindmodel.png"/>
 </div>
+
 其中ActorName需要与MotionVenus中对应的人物套装编号一致，例如：
+
 <div align=center>
-<img src="actorname.png"/>
+<img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/img/actorname.png"/>
 </div>
+
 而ConfigName需要与工程根目录里的xml配置文件名称一致。<br>
 然后选择NetworkReceiver，将ActorList中Size设为1，点击Element 0右侧选择按钮，在弹出的窗口中选择刚才设置好的FoActorRig。
+
 <div align=center>
-<img src="addtoactorlist.png"/>
+<img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/img/addtoactorlist.png"/>
 </div>
+
 设置完成之后如下：
+
 <div align=center>
-<img src="addactorlistsuccess.png"/>
+<img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/img/addactorlistsuccess.png"/>
 </div>
+
 如果在MotionVenus中连接有多套设备，在这里只需要将Size设为设备数目，然后依次选择设备需要绑定的Model，例如下面为添加了两个Model：
+
 <div align=center>
-<img src="multisuits.png"/>
+<img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/img/multisuits.png"/>
 </div>
+
 6. 穿戴并完成校准动作，此时模型在MotionVenus中就可以正常的运动起来了。
+
 # 四、模型绑定
 由于在建模过程中使用的3D建模软件不同，或者在建模过程中没有使用软件推荐的骨骼系统，就会造成骨骼坐标系的不统一，这里的工作就是将任意旋转任意坐标系朝向的骨骼系统使用动捕数据流驱动。
 ## 4.1 默认数据流格式
 MotionVenus使用下面格式的数据流输出人物的姿态位置信息：
+
 <div align=center>
-<img src="stream.png"/>
+<img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/img/stream.png"/>
 </div>
+
 ## 4.2 默认坐标系定义
 在MotionVenus中的坐标系定义如下：
+
 <div align=center>
-<img src="defaultaxis.png"/>
+<img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/img/defaultaxis.png"/>
 </div>
+
 即在T-Pose时所有骨骼的坐标轴定义都为左手边为x轴（红色轴），上方为z轴（蓝色轴），身体后方为y轴（绿色轴），数据流输出的是骨骼在世界坐标系（右手坐标系）中的旋转，骨骼位移也是在世界坐标系中的位移。
 ## 4.3 旋转转换
+
 <div align=center>
-<img src="leftrighthand.png"/>
+<img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/img/leftrighthand.png"/>
 </div>
+
 在Unity3D中的坐标系为左手坐标系，例如上图中的手，如果同样沿y轴旋转90度，则左侧手转向屏幕外，而右侧手转向屏幕里，其它两个轴也存在相同的问题，这样会造成同一段骨骼在MotionVenus中的旋转和U3D中的旋转现象不一致，在这里我们需要手动纠正这种不同坐标系造成的旋转错误。<br>
 以左胳膊为例，选择显示左胳膊的Local坐标系。例如胳膊在U3D中沿+x轴旋转，在U3D中为+x，而在MotionVenus中要想达到同样效果也为+x（因为左右手旋转规则不同）；在U3D中沿+y轴旋转，在MotionVenus中要想达到同样效果为沿-y轴旋转；z轴的规则也相同。
+
 <div align=center>
-<img src="axiscompare.png"/>
+<img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/img/axiscompare.png"/>
 </div>
+
 所以在FoheartModel.cs中applyBoneRotations函数中，对左胳膊的旋转设置为：
-<br>
-> if (BoneR.Key == 12) 
-> {
->    Quaternion convQuatApply = new Quaternion (BV.x, -BV.y, -BV.z, BV.w);
->    BoneT.localRotation = convQuatApply;
-> }
-<br>
+
+ if (BoneR.Key == 12) <br>
+ {<br>
+    Quaternion convQuatApply = new Quaternion (BV.x, -BV.y, -BV.z, BV.w);<br>
+    BoneT.localRotation = convQuatApply;<br>
+ }<br>
+
 其它所有段骨骼的设置均遵守相同方法。
 # 五、注意事项
 插件使用时，需要注意以下地方：
