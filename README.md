@@ -22,7 +22,7 @@
 # 二、文件简介
 在文件目录中，其中FHMCScript是插件的代码部分，Template中是示例模型，**DefaltActor.xml**是示例模型的配置文件。
 ## 2.1 FHMCScript主要文件简介
-1. NetFrameDataReceiver.cs用于接收来自MotionVenus软件的网络数据流，需要将其安置在场景当中的一个单独的永久物体上（2D、3D物体均可），例如新建一个3D Object->Cube，命名为**NetworkReceiver**将**NetFrameDataReceiver.cs**拖动到它之上。在整个运行过程中，不要对NetworkReceiver再进行其它操作，以免出现不可预料的网络问题。
+1. **NetFrameDataReceiver.cs**用于接收来自MotionVenus软件的网络数据流，需要将其安置在场景当中的一个单独的永久物体上（2D、3D物体均可），例如新建一个3D Object->Cube，命名为**NetworkReceiver**将**NetFrameDataReceiver.cs**拖动到它之上。在整个运行过程中，不要对NetworkReceiver再进行其它操作，以免出现不可预料的网络问题。
 2. **FoheartModel.cs**用于控制模型运动。将其拖动到需要控制运动的类人体模型之上即可。
 3. **ActorFrameData.cs**是数据解析文件，不需要进行操作。
 4. 其他 .cs文件是一些定制功能的脚本文件。
@@ -57,7 +57,8 @@
 	<tr><th>22</th><th>LeftToeBase</th><th></th></tr>
 </table>
 </div>
-需要将模型的对应骨骼名称填写在xml文件的name栏中，即可对这段骨骼进行旋转控制。<br>
+
+需要将模型的对应骨骼名称填写在xml文件的name栏中，即可对这段骨骼进行旋转控制。
 ## 2.3 非标准骨骼绑定
 1. 如果模型的骨骼数目大于23段，比如背部骨骼有5段如何操作？<br>
 需要将背部骨骼中的某两段合为一段控制，由于在Unity3D中旋转父骨骼会带动它所有的子节点旋转，所以只需要将父骨骼的名称填到xml文件中即可，最后要保证所有骨骼数目小于等于23段。
@@ -80,7 +81,7 @@
 </div>
 
 4. 将NetFrameDataReceiver.cs 拖放到NetworkReceiver上，在其Inspector中会显示下面属性：
-5. 
+
 <div align=center>
 <img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/img/bindreceiver.png"/>
 </div>
