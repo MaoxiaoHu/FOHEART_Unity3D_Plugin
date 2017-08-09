@@ -27,7 +27,13 @@
 3. **ActorFrameData.cs**是数据解析文件，不需要进行操作。
 4. 其他 .cs文件是一些定制功能的脚本文件。
 ## 2.2 配置文件xml
-这个配置文件决定了网络数据中骨骼数据与用户骨骼模型骨骼的绑定关系，它的决定人体骨骼的旋转和位移，正常情况下，我们需要自己编写这个配置文件，配置方法参照**DefaltActor.xml**的配置方法。配置文件中的**ConnectId** 是骨骼的索引编号，**name**是这个位置控制的模型骨骼的名称。<br>
+
+
+
+这个配置文件决定了网络数据中骨骼数据与用户骨骼模型骨骼的绑定关系，它决定了人体骨骼的旋转和位移，正常情况下，我们需要自己编写这个配置文件，配置方法参照**DefaltActor.xml**的配置方法。<br>配置文件中的**ConnectId** 是骨骼的索引编号，**name**是这个位置控制的模型骨骼的名称，**X Y Z**为骨骼初始旋转顺序，**XR YR ZR**为**T_Pose**下骨骼的本地旋转**角度**值。<br>
+
+&lt;bone ConnectId = "0" name = "Hips" X="-Y" Y="-X" Z="-Z" XR="-90.0" YR="0.0" ZR="90.0"&gt;&lt;/bone&lt;
+
 默认的编号要求规范是：
 <div align=center>
 <table>
@@ -65,9 +71,8 @@
 2. 如果模型的骨骼数目小于23段，比如背部骨骼只有2段如何操作？<br>
 在这种情况下需要去掉xml文件中不需要的索引，但是必须要留下Hips或Spine节点，因为这个节点还控制整个模型的位置，如果去掉整个模型就不会运动。例如以下：
 
-&lt;bone ConnectId = "0" name = "Hips"&gt;&lt;/bone&gt;
-
-&lt;bone ConnectId = "3" name = "Spine1"&gt;&lt;/bone&gt;
+&lt;bone ConnectId="0" name="Hips X="-Y" Y="-X" Z="-Z" XR="-90.0" YR="0.0" ZR="90.0"&gt;&lt;/bone&gt;
+&lt;bone ConnectId="3" name="Spine1" X="Z" Y="Y" Z="-X" XR="0.0" YR="0.0" ZR="0.0"&gt;&lt;/bone&gt;
 
 在这里首先去掉了1 2 4这三段骨骼，因为模型中没有这三段骨骼，因此也就相当于用标准模型的T8~T11段骨骼运动代替了模型的Spine1段骨骼运动，当然也可以使用索引1或2（如果模型的Spine1段骨骼比较靠下接近胯部）或4（如果模型的Spine1段骨骼比较靠上接近颈部），需要根据实际情况而定。
 # 三、插件使用流程
@@ -163,11 +168,15 @@ MotionVenus使用下面格式的数据流输出人物的姿态位置信息：
 
 所以在FoheartModel.cs中applyBoneRotations函数中，对左胳膊的旋转设置为：
 
+在v1.2.8中的设置：<br>
  if (BoneR.Key == 12) <br>
  {<br>
     Quaternion convQuatApply = new Quaternion (BV.x, -BV.y, -BV.z, BV.w);<br>
     BoneT.localRotation = convQuatApply;<br>
  }<br>
+现在的设置，直接改配置文件：
+
+&lt;bone ConnectId = "12" name = "LeftArm" X="X" Y="-Y" Z="-Z" XR="0.0" YR="0.0" ZR="0.0"&gt;&lt;/bone&gt;
 
 其它所有段骨骼的设置均遵守相同方法。
 # 五、注意事项
