@@ -151,7 +151,7 @@ MotionVenus使用下面格式的数据流输出人物的姿态位置信息：
 <img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/img/defaultaxis.png"/>
 </div>
 
-即在T-Pose时所有骨骼的坐标轴定义都为左手边为x轴（红色轴），上方为z轴（蓝色轴），身体后方为y轴（绿色轴），数据流输出的是骨骼在世界坐标系（右手坐标系）中的旋转，骨骼位移也是在世界坐标系中的位移。
+即在T-Pose时所有骨骼的坐标轴定义都为左手边为x轴（红色轴），上方为z轴（蓝色轴），身体后方为y轴（绿色轴），数据流输出的是骨骼在本地坐标系（右手坐标系，相对于父骨骼；其中胯部的本地旋转也就等于其在世界坐标系中的全局旋转）中的旋转，骨骼位移是骨骼在世界坐标系中的位移。
 ## 4.3 旋转转换
 
 <div align=center>
