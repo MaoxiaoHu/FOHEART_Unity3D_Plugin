@@ -29,6 +29,11 @@ namespace FoheartMC
         //初始化
         void Start()
         {
+            if (true == BoneEuler && true == BoneQuat)
+            {
+                Debug.Log("You can not set BoneEuler and BoneQuat at the same time.");
+                return;
+            }
             initRec();
         }
 
@@ -61,7 +66,7 @@ namespace FoheartMC
                 try
                 {
                     byte[] data = udpReceiver.Receive(ref endpoint);
-                    int dataErro = frameDataTemp.deComposeData(data);
+                    int dataErro = frameDataTemp.deComposeData(data,BonePosition,BoneEuler,BoneQuat);
                     if (dataErro != 0)
                     {
                         Debug.Log("Data Erro:" + dataErro);
