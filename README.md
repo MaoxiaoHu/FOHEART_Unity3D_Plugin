@@ -96,7 +96,7 @@ UDP Port的设定需要与MotionVenus中的设定相同，如果在MotionVenus�
 <img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/img/mvremoteipport.png"/>
 </div>
 
-Position、Euler、Quat的设定需要与MotionVenus中的转发规则设置中位移、欧拉角、四元数的选择保持一致，例如：
+Position、Euler、Quat的设定需要与**MotionVenus**中的转发规则设置中位移、欧拉角、四元数的选择保持一致，例如：
 
 <div align=center>
 <img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/img/mvtransrule.png"/>
@@ -108,7 +108,7 @@ Position、Euler、Quat的设定需要与MotionVenus中的转发规则设置中�
 <img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/img/bindmodel.png"/>
 </div>
 
-其中ActorName需要与MotionVenus中对应的人物套装编号一致，例如：
+其中ActorName需要与MotionVenus中对应的人物**套装编号**一致，例如下面这一套的套装编号是**Actor1(Live)**。
 
 <div align=center>
 <img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/img/actorname.png"/>
