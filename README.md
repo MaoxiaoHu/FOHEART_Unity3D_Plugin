@@ -30,7 +30,7 @@
 这个配置文件决定了网络数据中骨骼数据与用户骨骼模型骨骼的绑定关系，它决定了人体骨骼的旋转和位移，正常情况下，我们需要自己编写这个配置文件，配置方法参照**DefaltActor.xml**的配置方法。<br>
 配置文件中的**ConnectId** 是骨骼的索引编号，**name**是这个位置控制的模型骨骼的名称，**X Y Z**为骨骼初始旋转顺序，**XR YR ZR**为**T_Pose**下骨骼的本地旋转**角度**值。<br>
 
-&lt;bone ConnectId = "0" name = "Hips" X="-Y" Y="-X" Z="-Z" XR="-90.0" YR="0.0" ZR="90.0"&gt;&lt;/bone&lt;
+&lt;bone ConnectId = "0" name = "Hips" X="-Y" Y="-X" Z="-Z" XR="-90.0" YR="0.0" ZR="90.0"&gt;&lt;/bone&gt;
 
 <div align=center>
 <img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/v1.3.2/help/img/ctls.png"/>
