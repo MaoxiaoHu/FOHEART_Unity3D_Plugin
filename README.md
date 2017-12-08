@@ -54,11 +54,11 @@
 	<tr><th>15</th><th>RightUpLeg</th><th></th></tr>
 	<tr><th>16</th><th>RightLeg</th><th></th></tr>
 	<tr><th>17</th><th>RightFoot</th><th></th></tr>
-	<tr><th>18</th><th>RightToeBase </th><th></th></tr>
+	<tr><th>18</th><th>RightToeBase </th><th>右脚尖</th></tr>
 	<tr><th>19</th><th>LeftUpLeg</th><th></th></tr>
 	<tr><th>20</th><th>LeftLeg</th><th></th></tr>
 	<tr><th>21</th><th>LeftFoot</th><th></th></tr>
-	<tr><th>22</th><th>LeftToeBase</th><th></th></tr>
+	<tr><th>22</th><th>LeftToeBase</th><th>左脚尖</th></tr>
 </table>
 </div>
 
