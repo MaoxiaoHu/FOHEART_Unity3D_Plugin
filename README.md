@@ -32,6 +32,10 @@
 
 &lt;bone ConnectId = "0" name = "Hips" X="-Y" Y="-X" Z="-Z" XR="-90.0" YR="0.0" ZR="90.0"&gt;&lt;/bone&lt;
 
+<div align=center>
+<img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/v1.3.2/help/img/ctls.png"/>
+</div>
+
 默认的编号对应的人体骨骼关系是：
 <div align=center>
 <table>
