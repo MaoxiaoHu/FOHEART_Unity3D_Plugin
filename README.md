@@ -169,20 +169,21 @@ MotionVenus使用下面格式的数据流输出人物的姿态位置信息：
 <img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/img/axiscompare.png"/>
 </div>
 
-所以在FoheartModel.cs中applyBoneRotations函数中，对左胳膊的旋转设置为：
+所以在FoheartModel.cs中applyBoneRotations函数中，对左上臂的旋转设置为：
 
-在v1.2.8中的设置：<br>
- if (BoneR.Key == 12) <br>
- {<br>
-    Quaternion convQuatApply = new Quaternion (BV.x, -BV.y, -BV.z, BV.w);<br>
-    BoneT.localRotation = convQuatApply;<br>
- }<br>
-现在的设置，直接改配置文件：
+在MotionVenus v1.2.8及更低版本中的设置如下：<br>
+>  if (BoneR.Key == 12)//骨骼索引12为左上臂 <br>
+>  {<br>
+>     Quaternion convQuatApply = new Quaternion (**BV.x, -BV.y, -BV.z, BV.w**);<br>
+>     BoneT.localRotation = convQuatApply;<br>
+>  }<br>
 
-&lt;bone ConnectId = "12" name = "LeftArm" X="X" Y="-Y" Z="-Z" XR="0.0" YR="0.0" ZR="0.0"&gt;&lt;/bone&gt;
+现在设置无需修改代码，直接修改配置文件即可：
+
+> &lt;bone ConnectId = "**12**" name = "**LeftArm**" X="**X**" Y="**-Y**" Z="**-Z**" XR="**0.0**" YR="**0.0**" ZR="**0.0**"&gt;&lt;/bone&gt;
 
 其它所有段骨骼的设置均遵守相同方法。
 # 五、注意事项
 插件使用时，需要注意以下地方：
-1. 在模型绑定过程中，需要首先将模型调整到标准的T姿势，并且人物正面朝着Unity的Z轴正方向。
-2. 使用Unity的过程中MotionVenus不可最小化。
+1. 在模型绑定过程中，需要首先将模型调整到标准的T姿势，并且人物正面朝着Unity3D的Z轴正方向。
+2. 使用Unity3D的过程中MotionVenus不可最小化。
