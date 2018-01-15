@@ -183,7 +183,23 @@ MotionVenus使用下面格式的数据流输出人物的姿态位置信息：
 > &lt;bone ConnectId = "**12**" name = "**LeftArm**" X="**X**" Y="**-Y**" Z="**-Z**" XR="**0.0**" YR="**0.0**" ZR="**0.0**"&gt;&lt;/bone&gt;
 
 其它所有段骨骼的设置均遵守相同方法。
-# 五、注意事项
+# 五、Demo场景
+<div align=center>
+<img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/img/demo_autumn.png" width="400"/>
+<img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/img/demo_hospital.png" width="400"/>
+</div>
+<div align=center>
+<img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/img/demo_indust.png" width="400"/>
+<img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/img/demo_med.png" width="400"/>
+</div>
+<div align=center>
+<img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/img/demo_monumental.png" width="400"/>
+<img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/img/demo_purple.png" width="400"/>
+</div>
+<div align=center>
+<img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/img/demo_sci.png" width="400"/>
+</div>
+# 六、注意事项
 插件使用时，需要注意以下地方：
 1. 在模型绑定过程中，需要首先将模型调整到标准的T姿势，并且人物正面朝着Unity3D的Z轴正方向。
 2. 使用Unity3D的过程中MotionVenus不可最小化。
