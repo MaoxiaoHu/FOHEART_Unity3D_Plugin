@@ -78,7 +78,7 @@ namespace FoheartMC
             {
                 Debug.LogError("Please check Config Name is Right or ConnectId's name is valid in Model!");
             }
-            HipsStartLocation = new Vector3(HipsStartTrans.position.x, HipsStartTrans.position.y, HipsStartTrans.position.z);
+            HipsStartLocation = HipsStartLocation;// +new Vector3(HipsStartTrans.position.x, HipsStartTrans.position.y, HipsStartTrans.position.z);
         }
 
 
@@ -262,9 +262,9 @@ namespace FoheartMC
                 Vector3 LocInUnity = new Vector3();
                 UInt32 scale = 1;
                 LocInUnity.Set(
-                    -data.bonePositions[0].x * scale,
-                    data.bonePositions[0].z * scale,
-                    -data.bonePositions[0].y * scale);
+                    (-data.bonePositions[0].x + HipsStartLocation.x) * scale,
+                    (data.bonePositions[0].z+HipsStartLocation.y) * scale,
+                    (-data.bonePositions[0].y+HipsStartLocation.z) * scale);
                 if (FixHipsLocation)
                 {
                 }
