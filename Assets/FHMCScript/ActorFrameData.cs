@@ -30,6 +30,7 @@ namespace FoheartMC
         Dictionary<Byte, Vector3> boneRotEuler;
         public Dictionary<Byte, Vector3> bonePositions;
 
+
         private const UInt16 EulerScale = (1 << 7);
         private const UInt16 QuatScale = (1 << 8);
         private const UInt32 PositionScale = (1 << 16);

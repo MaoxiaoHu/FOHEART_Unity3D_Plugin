@@ -21,7 +21,10 @@ namespace FoheartMC
 
         //是否使用远程位移
         public Vector3 HipsStartLocation;
-        public bool FixHipsLocation;
+		public bool FixHipsLocation;
+
+		public String[] BonesName;
+		public Vector3[] BonesLocation;
 
         string OutText;
         //调试输出的文本,可以在任意时候更改,
@@ -58,6 +61,8 @@ namespace FoheartMC
 
         public FoheartModel()
         {
+			BonesLocation = new Vector3[23];
+			BonesName = new string[23]{ "Pelvis", "L5" , "L3", "T12", "T8", "Neck", "Head", "RightShoulder", "RightUpperArm", "RightForeArm", "RightHand", "LeftShoulder","LeftUpperArm", "LeftForeArm" , "LeftHand", "RightUpperLeg", "RightLowerLeg", "RightFoot", "RightToe", "LeftUpperLeg", "LeftLowerLeg", "LeftFoot", "LeftToe"};
             ActorName = "Actor1(Live)";
             ConfigName = "DefaultActor.xml";
         }
@@ -264,7 +269,12 @@ namespace FoheartMC
                 LocInUnity.Set(
                     (-data.bonePositions[0].x + HipsStartLocation.x) * scale,
                     (data.bonePositions[0].z+HipsStartLocation.y) * scale,
-                    (-data.bonePositions[0].y+HipsStartLocation.z) * scale);
+                    (-data.bonePositions[0].y+HipsStartLocation.z) * scale
+				              );
+				for (int i = 0; i < 23; i++) {
+					Byte ind = (Byte)i;
+					BonesLocation [i].Set (data.bonePositions[ind].x,data.bonePositions[ind].x,data.bonePositions[ind].x);
+				}
                 if (FixHipsLocation)
                 {
                 }
