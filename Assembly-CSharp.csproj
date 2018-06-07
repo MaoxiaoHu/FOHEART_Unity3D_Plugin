@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{97F31E60-61BC-E66D-4534-D8887464DE9F}</ProjectGuid>
+    <ProjectGuid>{C7F593D3-54C0-6149-0587-99E2F3BB3C5D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -46,13 +46,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Elenesski Generic Move Camera\GenericMoveCamera.cs" />
-     <Compile Include="Assets\Elenesski Generic Move Camera\GenericMoveCameraInputs.cs" />
      <Compile Include="Assets\FHMCScript\ActorFrameData.cs" />
-     <Compile Include="Assets\FHMCScript\CustumButton.cs" />
+     <Compile Include="Assets\FHMCScript\FOHEARTMath.cs" />
      <Compile Include="Assets\FHMCScript\FoheartModel.cs" />
-     <Compile Include="Assets\FHMCScript\MoveWithAnother.cs" />
      <Compile Include="Assets\FHMCScript\NetFrameDataReceiver.cs" />
+     <Compile Include="Assets\FHMCScript\UI_CalibrationOption.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>E:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

@@ -24,7 +24,11 @@ namespace FoheartMC
 		public bool FixHipsLocation;
 
 		public String[] BonesName;
-		public Vector3[] BonesLocation;
+		public Vector3[] BonesLocation=new Vector3[23];
+		public String[] SensorName;
+		public Vector3[] SensorAccel=new Vector3[23];
+		public Vector3[] SensorGyro=new Vector3[23];
+		public Vector3[] SensorMag=new Vector3[23];
 
         string OutText;
         //调试输出的文本,可以在任意时候更改,
@@ -61,9 +65,60 @@ namespace FoheartMC
 
         public FoheartModel()
         {
-			BonesLocation = new Vector3[23];
-			BonesName = new string[23]{ "Pelvis", "L5" , "L3", "T12", "T8", "Neck", "Head", "RightShoulder", "RightUpperArm", "RightForeArm", "RightHand", "LeftShoulder","LeftUpperArm", "LeftForeArm" , "LeftHand", "RightUpperLeg", "RightLowerLeg", "RightFoot", "RightToe", "LeftUpperLeg", "LeftLowerLeg", "LeftFoot", "LeftToe"};
-            ActorName = "Actor1(Live)";
+			
+			BonesName = new string[23]{ 
+				"Pelvis", 
+				"L5" , 
+				"L3", 
+				"T12",
+				"T8",
+				"Neck", 
+				"Head",
+				"RightShoulder", 
+				"RightUpperArm", 
+				"RightForeArm", 
+				"RightHand", 
+				"LeftShoulder",
+				"LeftUpperArm", 
+				"LeftForeArm" , 
+				"LeftHand",
+				"RightUpperLeg",
+				"RightLowerLeg",
+				"RightFoot", 
+				"RightToe", 
+				"LeftUpperLeg", 
+				"LeftLowerLeg", 
+				"LeftFoot", 
+				"LeftToe"
+			};
+
+			SensorName = new String[23]{
+				"Hip",
+				"Not Attach Sensor",
+				"Not Attach Sensor",
+				"Chest",
+				"Not Attach Sensor",
+				"Not Attach Sensor",
+				"Head",
+				"Left Shoulder",
+				"Left Upper Arm",
+				"Left Lower Arm",
+				"Left Hand",
+				"Right Shoulder",
+				"Right Upper Arm",
+				"Right Lower Arm",
+				"Right Hand",
+				"Left Thigh",
+				"Left Shank",
+				"Left Foot",
+				"Not Attach Sensor",
+				"Right Thigh",
+				"Right Shank",
+				"Right Foot",
+				"Not Attach Sensor",
+			};
+
+			ActorName = "Actor1(Live)";
             ConfigName = "DefaultActor.xml";
         }
 
@@ -274,6 +329,12 @@ namespace FoheartMC
 				for (int i = 0; i < 23; i++) {
 					Byte ind = (Byte)i;
 					BonesLocation [i].Set (data.bonePositions[ind].x,data.bonePositions[ind].x,data.bonePositions[ind].x);
+					//SensorAccel [i].Set (data.sensorAccels [ind].x, data.sensorAccels [ind].y, data.sensorAccels [ind].z);
+				}
+				for (int i = 0; i < 23; i++) {
+					Byte ind = (Byte)i;
+					//BonesLocation [i].Set (data.bonePositions[ind].x,data.bonePositions[ind].x,data.bonePositions[ind].x);
+					SensorAccel [i].Set (data.sensorAccels [ind].x, data.sensorAccels [ind].y, data.sensorAccels [ind].z);
 				}
                 if (FixHipsLocation)
                 {

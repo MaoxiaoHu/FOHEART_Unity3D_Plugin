@@ -24,6 +24,7 @@ namespace FoheartMC
         public bool BonePosition;
         public bool BoneEuler;
         public bool BoneQuat;
+		public bool SensorAccel;
         //调试文本
         string OutText;
 
@@ -33,8 +34,9 @@ namespace FoheartMC
         {
             UDPPort = 5001;
             BonePosition = true;
-            BoneEuler = false;
-            BoneQuat = true;
+            BoneEuler = true;
+            BoneQuat = false;
+			SensorAccel = false;
             udpSender = new System.Net.Sockets.UdpClient();
             
         }
@@ -135,7 +137,7 @@ namespace FoheartMC
 
                     }else
                     {
-                        int dataErro = frameDataTemp.deComposeData(data, BonePosition, BoneEuler, BoneQuat);
+						int dataErro = frameDataTemp.deComposeData(data, BonePosition, BoneEuler, BoneQuat,SensorAccel);
                         if (dataErro != 0)
                         {
                             Debug.Log("Data Erro:" + dataErro);
