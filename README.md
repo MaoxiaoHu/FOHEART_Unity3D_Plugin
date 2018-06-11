@@ -33,6 +33,7 @@
 &lt;bone ConnectId = "0" name = "Hips" X="-Y" Y="-X" Z="-Z" XR="-90.0" YR="0.0" ZR="90.0"&gt;&lt;/bone&lt;
 
 默认的编号对应的人体骨骼关系是：
+<center>表1：完整骨骼列表</center>
 <div align=center>
 <table>
    <tr><th>索引</th><th>名称</th><th>备注</th></tr>
@@ -54,13 +55,14 @@
 	<tr><th>15</th><th>RightUpLeg</th><th></th></tr>
 	<tr><th>16</th><th>RightLeg</th><th></th></tr>
 	<tr><th>17</th><th>RightFoot</th><th></th></tr>
-	<tr><th>18</th><th>RightToeBase </th><th></th></tr>
+	<tr><th>18</th><th>RightToeBase </th><th>五块趾骨组成的前脚掌部分</th></tr>
 	<tr><th>19</th><th>LeftUpLeg</th><th></th></tr>
 	<tr><th>20</th><th>LeftLeg</th><th></th></tr>
 	<tr><th>21</th><th>LeftFoot</th><th></th></tr>
-	<tr><th>22</th><th>LeftToeBase</th><th></th></tr>
+	<tr><th>22</th><th>LeftToeBase</th><th>五块趾骨组成的前脚掌部分</th></tr>
 </table>
 </div>
+
 
 需要将模型的对应骨骼名称填写在xml文件的name栏中，即可对这段骨骼进行旋转控制。
 ## 2.3 非标准骨骼绑定
@@ -148,18 +150,20 @@ MotionVenus使用下面格式的数据流输出人物的姿态位置信息：
 在MotionVenus中的坐标系定义如下：
 
 <div align=center>
-<img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/img/defaultaxis.png"/>
+<img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/img/skeletoncoord.png"/>
 </div>
-
-即在T-Pose时所有骨骼的坐标轴定义都为左手边为x轴（红色轴），上方为z轴（蓝色轴），身体后方为y轴（绿色轴），数据流输出的是骨骼在世界坐标系（右手坐标系）中的旋转，骨骼位移也是在世界坐标系中的位移。
+即MotionVenus使用右手坐标系。<br>
+在T-Pose时所有骨骼的坐标轴定义都为左手边为x轴（红色轴），上方为z轴（蓝色轴），身体后方为y轴（绿色轴），数据流输出的是骨骼在世界坐标系（右手坐标系）中的旋转，骨骼位移也是在世界坐标系中的位移。<br>
+更加详细的坐标系解释请见[【链接】](https://github.com/FOHEART/MotionVenusHelp/blob/v1.4.0/software/coordsystem.md)。
 ## 4.3 旋转转换
 
 <div align=center>
 <img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/img/leftrighthand.png"/>
 </div>
 
-在Unity3D中的坐标系为左手坐标系，例如上图中的手，如果同样沿y轴旋转90度，则左侧手转向屏幕外，而右侧手转向屏幕里，其它两个轴也存在相同的问题，这样会造成同一段骨骼在MotionVenus中的旋转和U3D中的旋转现象不一致，在这里我们需要手动纠正这种不同坐标系造成的旋转错误。<br>
-以左胳膊为例，选择显示左胳膊的Local坐标系。例如胳膊在U3D中沿+x轴旋转，在U3D中为+x，而在MotionVenus中要想达到同样效果也为+x（因为左右手旋转规则不同）；在U3D中沿+y轴旋转，在MotionVenus中要想达到同样效果为沿-y轴旋转；z轴的规则也相同。
+在Unity3D中的坐标系为左手坐标系，例如上图中的手，如果同样沿y轴旋转90度，则左侧手转向屏幕外，而右侧手转向屏幕里，其它两个轴也存在相同的问题，这样会造成同一段骨骼在MotionVenus中的旋转和U3D中的旋转现象不一致，在这里我们需要手动纠正这种不同坐标系造成的旋转变换。<br>
+以左胳膊为例，在Unity3D工具栏中选择显示左胳膊的Local坐标系。<br>
+例如胳膊在U3D中沿+x轴旋转，在U3D中为+x，而在MotionVenus中要想达到同样效果也为+x（因为左右手旋转规则不同）；在U3D中沿+y轴旋转，在MotionVenus中要想达到同样效果为沿-y轴旋转；z轴的规则也相同。
 
 <div align=center>
 <img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/img/axiscompare.png"/>
@@ -167,18 +171,22 @@ MotionVenus使用下面格式的数据流输出人物的姿态位置信息：
 
 所以在FoheartModel.cs中applyBoneRotations函数中，对左胳膊的旋转设置为：
 
-在v1.2.8中的设置：<br>
- if (BoneR.Key == 12) <br>
- {<br>
-    Quaternion convQuatApply = new Quaternion (BV.x, -BV.y, -BV.z, BV.w);<br>
-    BoneT.localRotation = convQuatApply;<br>
- }<br>
-现在的设置，直接改配置文件：
-
 &lt;bone ConnectId = "12" name = "LeftArm" X="X" Y="-Y" Z="-Z" XR="0.0" YR="0.0" ZR="0.0"&gt;&lt;/bone&gt;
 
 其它所有段骨骼的设置均遵守相同方法。
+## 4.4 模型绑定
+使用任意3D建模工具构建的人体或类人骨骼模型均可使用MotionVenus数据流驱动。<br>
+MotionVenus可以驱动的骨骼标准为本文2.2节中[表1]所列的骨骼数目，最大为23段。当然，也可灵活配置以驱动少于23段骨骼的类人模型。例如以下配置都是可以实现的：
+- 胯及胯部以上的上半身运动。
+- 胯及胯部以下的下半身运动。
+- 单独的单臂运动。
+- 单独的单腿运动。
+- 单独的头部运动。
+### 4.4.1 建模建议
+在MotionVenus中，以模型T-Pose为起始旋转输出每段骨骼相对于父骨骼的相对（Local）旋转值或相对于世界坐标的全局（Global）旋转值。所以在建模及绑定蒙皮时，最好使用T-Pose进行建模，或至少要保证在T-Pose时模型肩部无耸起、拉扯等情况。
+[什么是T-Pose?]
+[[为什么使用T-Pose?]](https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/whytpose.md)
 # 五、注意事项
 插件使用时，需要注意以下地方：
-1. 在模型绑定过程中，需要首先将模型调整到标准的T姿势，并且人物正面朝着Unity的Z轴正方向。
-2. 使用Unity的过程中MotionVenus不可最小化。
+1. 在模型绑定过程中，需要首先将模型调整到标准的T姿势，并且人物正面朝向Unity3D的Z轴正方向。
+2. 使用Unity3D的过程中MotionVenus不可最小化。
