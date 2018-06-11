@@ -185,9 +185,9 @@ MotionVenus可以驱动的骨骼标准为本文2.2节中[表1]所列的骨骼数
 - 单独的单腿运动。
 - 单独的头部运动。
 ### 4.4.1 建模建议
-在MotionVenus中，以模型T-Pose为起始旋转输出每段骨骼相对于父骨骼的相对（Local）旋转值或相对于世界坐标的全局（Global）旋转值。所以在建模及绑定蒙皮时，最好使用T-Pose进行建模，或至少要保证在T-Pose时模型肩部无耸起、拉扯等情况。
-[什么是T-Pose?]
-[[为什么使用T-Pose?]](https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/whytpose.md)
+在MotionVenus中，以模型T-Pose为起始旋转输出每段骨骼相对于父骨骼的相对（Local）旋转值或相对于世界坐标的全局（Global）旋转值。所以在建模及绑定蒙皮时，最好使用T-Pose进行建模，或至少要保证在T-Pose时模型肩部无耸起、拉扯等情况。<br>
+[什么是T-Pose?]<br>
+[[为什么使用T-Pose?]](https://github.com/FOHEART/FOHEART_Unity3D_Plugin/blob/master/help/whytpose.md)
 # 五、注意事项
 插件使用时，需要注意以下地方：
 1. 在模型绑定过程中，需要首先将模型调整到标准的T姿势，并且人物正面朝向Unity3D的Z轴正方向。
