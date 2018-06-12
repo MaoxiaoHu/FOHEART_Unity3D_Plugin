@@ -186,7 +186,7 @@ MotionVenus可以驱动的骨骼标准为本文2.2节中[表1]所列的骨骼数
 - 单独的头部运动。
 ### 4.4.1 建模建议
 在MotionVenus中，以模型T-POSE为起始旋转输出每段骨骼相对于父骨骼的相对（Local）旋转值或相对于世界坐标的全局（Global）旋转值。所以在建模及绑定蒙皮时，建议使用T-Pose进行建模，要保证在T-Pose时模型肩部无耸起、拉扯等情况。<br>
-[[什么是T-Pose?]](http://manual.reallusion.com/3DXchange_6/ENU/Pipeline/04_Modify_Page/Character_Section/Manually_Setting_T_Pose.htm)或[[离线版]](https://github.com/FOHEART/FOHEART_Unity3D_Plugin/blob/v1.3.6/help/Manually_Setting_T-Pose.pdf)<br>
+[[什么是T-Pose?]](http://manual.reallusion.com/3DXchange_6/ENU/Pipeline/04_Modify_Page/Character_Section/Manually_Setting_T_Pose.htm)或[[pdf]](https://github.com/FOHEART/FOHEART_Unity3D_Plugin/blob/v1.3.6/help/Manually_Setting_T-Pose.pdf)(直接复制url到下载软件)<br>
 [[为什么使用T-Pose?]](https://github.com/FOHEART/FOHEART_Unity3D_Plugin/blob/v1.3.6/help/whytpose.md)
 
 ### 4.4.2 配置文件说明
@@ -318,7 +318,7 @@ MotionVenus可以驱动的骨骼标准为本文2.2节中[表1]所列的骨骼数
 >   &lt;bone ConnectId = "16" name = "RightLeg" **X="-Z" Y="Y" Z="X"** XR="0.0" YR="0.0" ZR="0.0"&gt;&lt;/bone&gt;
 
 ### 4.4.7 转换实例
-【实例1】
+[【实例1】](https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/v1.3.6/help/bindingexample1.md)
 # 五、注意事项
 插件使用时，需要注意以下地方：
 1. 在模型绑定过程中，需要首先将模型调整到标准的T姿势，并且人物正面朝向Unity3D的Z轴正方向。
