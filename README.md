@@ -265,6 +265,7 @@ MotionVenus可以驱动的骨骼标准为本文2.2节中[表1]所列的骨骼数
 ### 4.4.5 第三步：写入初始角度
 将T-POSE中的每段骨骼的初始姿态角，填入与其对应的配置文件行中。也就是配置文件中对应行中的XR YR ZR值。如下图所示：
 
+<center>默认模型配置，仅供参考</center>
 <div align=center>
 <img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/v1.3.6/help/img/xryrzr.jpg"/>
 </div>
@@ -277,18 +278,32 @@ MotionVenus可以驱动的骨骼标准为本文2.2节中[表1]所列的骨骼数
 </div>
 
 文字版：
+<center>表2：骨骼初始坐标轴</center>
 <div align=center>
 <table>
    <tr><th>A11</th><th>X="X" Y="-Z" Z="Y"</th><th>A12</th><th>X="X" Y="Y" Z="Z"</th><th>A13</th><th>X="X" Y="Z" Z="-Y"</th><th>A14</th><th>X="X" Y="-Y" Z="-Z"</th></tr>
    <tr><th>A21</th><th>X="-X" Y="Z" Z="Y"</th><th>A22</th><th>X="-X" Y="-Y" Z="Z"</th><th>A23</th><th>X="-X" Y="-Z" Z="-Y"</th><th>A24</th><th>X="-X" Y="Y" Z="-Z"</th></tr>
-   <tr><th>A21</th><th>X="-Z" Y="-X" Z="Y"</th><th>A22</th><th>X="-Z" Y="-Y" Z="-X"</th><th>A23</th><th>X="-Z" Y="X" Z="-Y"</th><th>A24</th><th>X="-Z" Y="Y" Z="X"</th></tr>
-   <tr><th>A21</th><th>X="Z" Y="X" Z="Y"</th><th>A22</th><th>X="Z" Y="Y" Z="-X"</th><th>A23</th><th>X="Z" Y="-X" Z="-Y"</th><th>A24</th><th>X="Z" Y="-Y" Z="X"</th></tr>
-   <tr><th>A21</th><th>X="Y" Y="X" Z="-Z"</th><th>A22</th><th>X="Y" Y="-Z" Z="-X"</th><th>A23</th><th>X="Y" Y="-X" Z="Z"</th><th>A24</th><th>X="Y" Y="Z" Z="X"</th></tr>
-   <tr><th>A21</th><th>X="-Y" Y="-X" Z="-Z"</th><th>A22</th><th>X="-Y" Y="Z" Z="-X"</th><th>A23</th><th>X="-Y" Y="X" Z="Z"</th><th>A24</th><th>X="-Y" Y="-Z" Z="X"</th></tr>
+   <tr><th>A31</th><th>X="-Z" Y="-X" Z="Y"</th><th>A32</th><th>X="-Z" Y="-Y" Z="-X"</th><th>A33</th><th>X="-Z" Y="X" Z="-Y"</th><th>A34</th><th>X="-Z" Y="Y" Z="X"</th></tr>
+   <tr><th>A41</th><th>X="Z" Y="X" Z="Y"</th><th>A42</th><th>X="Z" Y="Y" Z="-X"</th><th>A43</th><th>X="Z" Y="-X" Z="-Y"</th><th>A44</th><th>X="Z" Y="-Y" Z="X"</th></tr>
+   <tr><th>A51</th><th>X="Y" Y="X" Z="-Z"</th><th>A52</th><th>X="Y" Y="-Z" Z="-X"</th><th>A53</th><th>X="Y" Y="-X" Z="Z"</th><th>A54</th><th>X="Y" Y="Z" Z="X"</th></tr>
+   <tr><th>A61</th><th>X="-Y" Y="-X" Z="-Z"</th><th>A62</th><th>X="-Y" Y="Z" Z="-X"</th><th>A63</th><th>X="-Y" Y="X" Z="Z"</th><th>A64</th><th>X="-Y" Y="-Z" Z="X"</th></tr>
 </table>
 </div>
 
 将对应Axx右侧所附的X="?" Y="?" Z="?"填入对应的配置文件行中的相应位置：
+
+<div align=center>
+<img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/v1.3.6/help/img/coordlink.jpg"/>
+</div>
+
+任选其一：例如选中右小腿，选择Local坐标系，找到与之完全相同的旋转顺序A34，则旋转顺序表示为：X="-Z" Y="Y" Z="X"：
+
+<div align=center>
+<img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/v1.3.6/help/img/rightlegexample.jpg"/>
+</div>
+
+将其填入xml文件中代表右小腿的行，得到：
+>   &lt;bone ConnectId = "16" name = "RightLeg" **X="-Z" Y="Y" Z="X"** XR="0.0" YR="0.0" ZR="0.0"&gt;&lt;/bone&gt;
 
 # 五、注意事项
 插件使用时，需要注意以下地方：
