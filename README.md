@@ -185,9 +185,86 @@ MotionVenus可以驱动的骨骼标准为本文2.2节中[表1]所列的骨骼数
 - 单独的单腿运动。
 - 单独的头部运动。
 ### 4.4.1 建模建议
-在MotionVenus中，以模型T-Pose为起始旋转输出每段骨骼相对于父骨骼的相对（Local）旋转值或相对于世界坐标的全局（Global）旋转值。所以在建模及绑定蒙皮时，最好使用T-Pose进行建模，或至少要保证在T-Pose时模型肩部无耸起、拉扯等情况。<br>
+在MotionVenus中，以模型T-Pose为起始旋转输出每段骨骼相对于父骨骼的相对（Local）旋转值或相对于世界坐标的全局（Global）旋转值。所以在建模及绑定蒙皮时，建议使用T-Pose进行建模，要保证在T-Pose时模型肩部无耸起、拉扯等情况。<br>
 [什么是T-Pose?]<br>
 [[为什么使用T-Pose?]](https://github.com/FOHEART/FOHEART_Unity3D_Plugin/blob/master/help/whytpose.md)
+### 4.4.2 配置文件说明
+每一个需要控制运动的模型，当添加完FoheartModel.cs脚本之后，需要唯一绑定一个xml配置文件，如下图：
+
+<div align=center>
+<img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/img/configfile.png"/>
+</div>
+
+该配置文件默认位置为Unity3D工程的根目录。<br>
+默认配置文件DefaultActor.xml的内容如下：
+> &lt;?xml version="1.0" encoding="utf-8"?&gt;
+> 
+> &lt;!--
+> 0=Spine , 1=Spine1 , 2=Spine2, 3=Spine3, 4=Spine4 , 5=Neck, 6=Head, 
+> 7=RightShoulder, 8=RightArm, 9=RightForeArm, 10=RightHand, 
+> 11=LeftShoulder, 12=LeftArm, 13=LeftForeArm, 14=LeftHand, 
+> 15=RightUpLeg, 16=RightLeg, 17=RightFoot, 18=RightToeBase,
+> 19=LeftUpLeg, 20=LeftLeg, 21=LeftFoot, 22=LeftToeBase
+> --&gt;
+> 
+> &lt;!--DefaultActor--&gt;
+> &lt;ActorBones&gt;
+>   &lt;bone ConnectId = "0" name = "Hips" X="-Y" Y="-X" Z="-Z" XR="-90.0" YR="0.0" ZR="90.0"&gt;&lt;/bone&gt;
+>   &lt;bone ConnectId = "1" name = "Spine1" X="Z" Y="Y" Z="-X" XR="0.0" YR="0.0" ZR="0.0"&gt;&lt;/bone&gt;
+>   &lt;bone ConnectId = "2" name = "Spine2" X="Z" Y="Y" Z="-X" XR="0.0" YR="0.0" ZR="0.0"&gt;&lt;/bone&gt;
+>   &lt;bone ConnectId = "3" name = "Spine3" X="Z" Y="Y" Z="-X" XR="0.0" YR="0.0" ZR="0.0"&gt;&lt;/bone&gt;
+>   &lt;bone ConnectId = "4" name = "Spine4" X="Z" Y="Y" Z="-X" XR="0.0" YR="0.0" ZR="0.0"&gt;&lt;/bone&gt;
+>   &lt;bone ConnectId = "5" name = "Neck" X="Z" Y="Y" Z="-X" XR="0.0" YR="0.0" ZR="0.0"&gt;&lt;/bone&gt;
+>   &lt;bone ConnectId = "6" name = "Head" X="Z" Y="Y" Z="-X" XR="0.0" YR="0.0" ZR="0.0"&gt;&lt;/bone&gt;
+> 
+>   &lt;bone ConnectId = "7" name = "RightShoulder" X="-X" Y="-Y" Z="Z" XR="0.0" YR="90.0" ZR="180.0"&gt;&lt;/bone&gt;
+>   &lt;bone ConnectId = "8" name = "RightArm" X="-X" Y="-Y" Z="Z" XR="0.0" YR="0.0" ZR="0.0"&gt;&lt;/bone&gt;
+>   &lt;bone ConnectId = "9" name = "RightForeArm" X="-X" Y="-Y" Z="Z" XR="0.0" YR="0.0" ZR="0.0"&gt;&lt;/bone&gt;
+>   &lt;bone ConnectId = "10" name = "RightHand" X="-X" Y="Z" Z="Y" XR="90.0" YR="0.0" ZR="0.0"&gt;&lt;/bone&gt;
+> 
+>   &lt;bone ConnectId = "11" name = "LeftShoulder" X="X" Y="-Y" Z="-Z" XR="0.0" YR="-90.0" ZR="180.0"&gt;&lt;/bone&gt;
+>   &lt;bone ConnectId = "12" name = "LeftArm" X="X" Y="-Y" Z="-Z" XR="0.0" YR="0.0" ZR="0.0"&gt;&lt;/bone&gt;
+>   &lt;bone ConnectId = "13" name = "LeftForeArm" X="X" Y="-Y" Z="-Z" XR="0.0" YR="0.0" ZR="0.0"&gt;&lt;/bone&gt;
+>   &lt;bone ConnectId = "14" name = "LeftHand" X="X" Y="Z" Z="-Y" XR="-90.0" YR="0.0" ZR="0.0"&gt;&lt;/bone&gt;
+> 
+>   &lt;bone ConnectId = "15" name = "RightUpLeg" X="-Z" Y="Y" Z="X" XR="0.0" YR="180.0" ZR="0.0"&gt;&lt;/bone&gt;
+>   &lt;bone ConnectId = "16" name = "RightLeg" X="-Z" Y="Y" Z="X" XR="0.0" YR="0.0" ZR="0.0"&gt;&lt;/bone&gt;
+>   &lt;bone ConnectId = "17" name = "RightFoot" X="-Z" Y="Y" Z="X" XR="0.0" YR="0.0" ZR="0.0"&gt;&lt;/bone&gt;
+>   &lt;bone ConnectId = "18" name = "RightToeBase" X="-Z" Y="Y" Z="X" XR="0.0" YR="0.0" ZR="-90.0"&gt;&lt;/bone&gt;
+> 
+>   &lt;bone ConnectId = "19" name = "LeftUpLeg" X="-Z" Y="Y" Z="X" XR="0.0" YR="-180.0" ZR="0.0"&gt;&lt;/bone&gt;
+>   &lt;bone ConnectId = "20" name = "LeftLeg" X="-Z" Y="Y" Z="X" XR="0.0" YR="0.0" ZR="0.0"&gt;&lt;/bone&gt;
+>   &lt;bone ConnectId = "21" name = "LeftFoot" X="-Z" Y="Y" Z="X" XR="0.0" YR="0.0" ZR="0.0"&gt;&lt;/bone&gt;
+>   &lt;bone ConnectId = "22" name = "LeftToeBase" X="-Z" Y="Y" Z="X" XR="0.0" YR="0.0" ZR="-90.0"&gt;&lt;/bone&gt;
+> &lt;/ActorBones&gt;
+
+
+其中：
+
+<div align=center>
+<table>
+   <tr><th>字段名称</th><th>功能</th></tr>
+   <tr><th>ConnectId</th><th>控制骨骼的索引</th></tr>
+	<tr><th>name</th><th>骨骼在U3D中的名字</th></tr>
+	<tr><th>X Y Z</th><th>骨骼Local坐标系与MotionVenus右手坐标系的变换关系</th></tr>
+<tr><th>XR YR ZR</th><th>骨骼在T-Pose时的初始姿态角（Local坐标系下）</th></tr>
+</table>
+</div>
+
+若模型并不满足23段骨骼，可适当删除不存在的某段骨骼代表的行。但ConnectId为0的骨骼作为根骨骼提供整个模型的空间位移，不可删除。
+### 4.4.3 第一步：调整模型为T-Pose
+首先需要将导入模型调整为T-Pose，直到所有骨骼都落在人体冠状面。<br>
+要点：在调整过程中，需要将坐标系系统调整为Local，并同时观察在T-Pose时每段骨骼的姿态角，若模型符合4.4.1节中的建模建议，此时每段骨骼的姿态角应为0°、±90°或±180°其中之一。
+### 4.4.4 第二步：写入骨骼名
+将需要控制的骨骼名称写入xml文件中的name栏中，并确定对应部位正确。如下图所示：
+
+<div align=center>
+<img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/img/namelink.jpg"/>
+</div>
+
+### 4.4.5 第三步：写入初始角度
+将T-Pose中的每段骨骼的初始姿态角，填入与其对应的配置文件行中。也就是配置文件中对应行中的XR YR ZR值。
+
 # 五、注意事项
 插件使用时，需要注意以下地方：
 1. 在模型绑定过程中，需要首先将模型调整到标准的T姿势，并且人物正面朝向Unity3D的Z轴正方向。
