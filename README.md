@@ -185,7 +185,7 @@ MotionVenus可以驱动的骨骼标准为本文2.2节中[表1]所列的骨骼数
 - 单独的单腿运动。
 - 单独的头部运动。
 ### 4.4.1 建模建议
-在MotionVenus中，以模型T-Pose为起始旋转输出每段骨骼相对于父骨骼的相对（Local）旋转值或相对于世界坐标的全局（Global）旋转值。所以在建模及绑定蒙皮时，建议使用T-Pose进行建模，要保证在T-Pose时模型肩部无耸起、拉扯等情况。<br>
+在MotionVenus中，以模型T-POSE为起始旋转输出每段骨骼相对于父骨骼的相对（Local）旋转值或相对于世界坐标的全局（Global）旋转值。所以在建模及绑定蒙皮时，建议使用T-Pose进行建模，要保证在T-Pose时模型肩部无耸起、拉扯等情况。<br>
 [什么是T-Pose?]<br>
 [[为什么使用T-Pose?]](https://github.com/FOHEART/FOHEART_Unity3D_Plugin/blob/master/help/whytpose.md)
 ### 4.4.2 配置文件说明
@@ -247,14 +247,14 @@ MotionVenus可以驱动的骨骼标准为本文2.2节中[表1]所列的骨骼数
    <tr><th>ConnectId</th><th>控制骨骼的索引</th></tr>
 	<tr><th>name</th><th>骨骼在U3D中的名字</th></tr>
 	<tr><th>X Y Z</th><th>骨骼Local坐标系与MotionVenus右手坐标系的变换关系</th></tr>
-<tr><th>XR YR ZR</th><th>骨骼在T-Pose时的初始姿态角（Local坐标系下）</th></tr>
+<tr><th>XR YR ZR</th><th>骨骼在T-POSE时的初始姿态角（Local坐标系下）</th></tr>
 </table>
 </div>
 
 若模型并不满足23段骨骼，可适当删除不存在的某段骨骼代表的行。但ConnectId为0的骨骼作为根骨骼提供整个模型的空间位移，不可删除。
-### 4.4.3 第一步：调整模型为T-Pose
-首先需要将导入模型调整为T-Pose，直到所有骨骼都落在人体冠状面。<br>
-要点：在调整过程中，需要将坐标系系统调整为Local，并同时观察在T-Pose时每段骨骼的姿态角，若模型符合4.4.1节中的建模建议，此时每段骨骼的姿态角应为0°、±90°或±180°其中之一。
+### 4.4.3 第一步：调整模型为T-POSE
+首先需要将导入模型调整为T-POSE，直到所有骨骼都落在人体冠状面。<br>
+要点：在调整过程中，需要将坐标系系统调整为Local，并同时观察在T-POSE时每段骨骼的姿态角，若模型符合4.4.1节中的建模建议，此时每段骨骼的姿态角应为0°、±90°或±180°其中之一。
 ### 4.4.4 第二步：写入骨骼名
 将需要控制的骨骼名称写入xml文件中的name栏中，并确定对应部位正确。如下图所示：
 
@@ -263,7 +263,32 @@ MotionVenus可以驱动的骨骼标准为本文2.2节中[表1]所列的骨骼数
 </div>
 
 ### 4.4.5 第三步：写入初始角度
-将T-Pose中的每段骨骼的初始姿态角，填入与其对应的配置文件行中。也就是配置文件中对应行中的XR YR ZR值。
+将T-POSE中的每段骨骼的初始姿态角，填入与其对应的配置文件行中。也就是配置文件中对应行中的XR YR ZR值。如下图所示：
+
+<div align=center>
+<img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/v1.3.6/help/img/xryrzr.jpg"/>
+</div>
+
+### 4.4.6 第四步：确定旋转顺序
+选择每段骨骼的Local坐标，在下图中A11~A64中找到与之完全对应的旋转顺序：
+
+<div align=center>
+<img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/v1.3.6/help/img/skeletoncoord.jpg"/>
+</div>
+
+文字版：
+<div align=center>
+<table>
+   <tr><th>A11</th><th>X="X" Y="-Z" Z="Y"</th><th>A12</th><th>X="X" Y="Y" Z="Z"</th><th>A13</th><th>X="X" Y="Z" Z="-Y"</th><th>A14</th><th>X="X" Y="-Y" Z="-Z"</th></tr>
+   <tr><th>A21</th><th>X="-X" Y="Z" Z="Y"</th><th>A22</th><th>X="-X" Y="-Y" Z="Z"</th><th>A23</th><th>X="-X" Y="-Z" Z="-Y"</th><th>A24</th><th>X="-X" Y="Y" Z="-Z"</th></tr>
+   <tr><th>A21</th><th>X="-Z" Y="-X" Z="Y"</th><th>A22</th><th>X="-Z" Y="-Y" Z="-X"</th><th>A23</th><th>X="-Z" Y="X" Z="-Y"</th><th>A24</th><th>X="-Z" Y="Y" Z="X"</th></tr>
+   <tr><th>A21</th><th>X="Z" Y="X" Z="Y"</th><th>A22</th><th>X="Z" Y="Y" Z="-X"</th><th>A23</th><th>X="Z" Y="-X" Z="-Y"</th><th>A24</th><th>X="Z" Y="-Y" Z="X"</th></tr>
+   <tr><th>A21</th><th>X="Y" Y="X" Z="-Z"</th><th>A22</th><th>X="Y" Y="-Z" Z="-X"</th><th>A23</th><th>X="Y" Y="-X" Z="Z"</th><th>A24</th><th>X="Y" Y="Z" Z="X"</th></tr>
+   <tr><th>A21</th><th>X="-Y" Y="-X" Z="-Z"</th><th>A22</th><th>X="-Y" Y="Z" Z="-X"</th><th>A23</th><th>X="-Y" Y="X" Z="Z"</th><th>A24</th><th>X="-Y" Y="-Z" Z="X"</th></tr>
+</table>
+</div>
+
+将对应Axx右侧所附的X="?" Y="?" Z="?"填入对应的配置文件行中的相应位置：
 
 # 五、注意事项
 插件使用时，需要注意以下地方：
