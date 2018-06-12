@@ -192,7 +192,7 @@ MotionVenus可以驱动的骨骼标准为本文2.2节中[表1]所列的骨骼数
 每一个需要控制运动的模型，当添加完FoheartModel.cs脚本之后，需要唯一绑定一个xml配置文件，如下图：
 
 <div align=center>
-<img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/img/configfile.png"/>
+<img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/v1.3.6/help/img/configfile.png"/>
 </div>
 
 该配置文件默认位置为Unity3D工程的根目录。<br>
@@ -207,35 +207,35 @@ MotionVenus可以驱动的骨骼标准为本文2.2节中[表1]所列的骨骼数
 > 19=LeftUpLeg, 20=LeftLeg, 21=LeftFoot, 22=LeftToeBase
 > --&gt;
 > 
-> &lt;!--DefaultActor--&gt;
-> &lt;ActorBones&gt;
->   &lt;bone ConnectId = "0" name = "Hips" X="-Y" Y="-X" Z="-Z" XR="-90.0" YR="0.0" ZR="90.0"&gt;&lt;/bone&gt;
->   &lt;bone ConnectId = "1" name = "Spine1" X="Z" Y="Y" Z="-X" XR="0.0" YR="0.0" ZR="0.0"&gt;&lt;/bone&gt;
->   &lt;bone ConnectId = "2" name = "Spine2" X="Z" Y="Y" Z="-X" XR="0.0" YR="0.0" ZR="0.0"&gt;&lt;/bone&gt;
->   &lt;bone ConnectId = "3" name = "Spine3" X="Z" Y="Y" Z="-X" XR="0.0" YR="0.0" ZR="0.0"&gt;&lt;/bone&gt;
->   &lt;bone ConnectId = "4" name = "Spine4" X="Z" Y="Y" Z="-X" XR="0.0" YR="0.0" ZR="0.0"&gt;&lt;/bone&gt;
->   &lt;bone ConnectId = "5" name = "Neck" X="Z" Y="Y" Z="-X" XR="0.0" YR="0.0" ZR="0.0"&gt;&lt;/bone&gt;
->   &lt;bone ConnectId = "6" name = "Head" X="Z" Y="Y" Z="-X" XR="0.0" YR="0.0" ZR="0.0"&gt;&lt;/bone&gt;
+> &lt;!--DefaultActor--&gt;<br>
+> &lt;ActorBones&gt;<br>
+>   &lt;bone ConnectId = "0" name = "Hips" X="-Y" Y="-X" Z="-Z" XR="-90.0" YR="0.0" ZR="90.0"&gt;&lt;/bone&gt;<br>
+>   &lt;bone ConnectId = "1" name = "Spine1" X="Z" Y="Y" Z="-X" XR="0.0" YR="0.0" ZR="0.0"&gt;&lt;/bone&gt;<br>
+>   &lt;bone ConnectId = "2" name = "Spine2" X="Z" Y="Y" Z="-X" XR="0.0" YR="0.0" ZR="0.0"&gt;&lt;/bone&gt;<br>
+>   &lt;bone ConnectId = "3" name = "Spine3" X="Z" Y="Y" Z="-X" XR="0.0" YR="0.0" ZR="0.0"&gt;&lt;/bone&gt;<br>
+>   &lt;bone ConnectId = "4" name = "Spine4" X="Z" Y="Y" Z="-X" XR="0.0" YR="0.0" ZR="0.0"&gt;&lt;/bone&gt;<br>
+>   &lt;bone ConnectId = "5" name = "Neck" X="Z" Y="Y" Z="-X" XR="0.0" YR="0.0" ZR="0.0"&gt;&lt;/bone&gt;<br>
+>   &lt;bone ConnectId = "6" name = "Head" X="Z" Y="Y" Z="-X" XR="0.0" YR="0.0" ZR="0.0"&gt;&lt;/bone&gt;<br>
 > 
->   &lt;bone ConnectId = "7" name = "RightShoulder" X="-X" Y="-Y" Z="Z" XR="0.0" YR="90.0" ZR="180.0"&gt;&lt;/bone&gt;
->   &lt;bone ConnectId = "8" name = "RightArm" X="-X" Y="-Y" Z="Z" XR="0.0" YR="0.0" ZR="0.0"&gt;&lt;/bone&gt;
->   &lt;bone ConnectId = "9" name = "RightForeArm" X="-X" Y="-Y" Z="Z" XR="0.0" YR="0.0" ZR="0.0"&gt;&lt;/bone&gt;
->   &lt;bone ConnectId = "10" name = "RightHand" X="-X" Y="Z" Z="Y" XR="90.0" YR="0.0" ZR="0.0"&gt;&lt;/bone&gt;
+>   &lt;bone ConnectId = "7" name = "RightShoulder" X="-X" Y="-Y" Z="Z" XR="0.0" YR="90.0" ZR="180.0"&gt;&lt;/bone&gt;<br>
+>   &lt;bone ConnectId = "8" name = "RightArm" X="-X" Y="-Y" Z="Z" XR="0.0" YR="0.0" ZR="0.0"&gt;&lt;/bone&gt;<br>
+>   &lt;bone ConnectId = "9" name = "RightForeArm" X="-X" Y="-Y" Z="Z" XR="0.0" YR="0.0" ZR="0.0"&gt;&lt;/bone&gt;<br>
+>   &lt;bone ConnectId = "10" name = "RightHand" X="-X" Y="Z" Z="Y" XR="90.0" YR="0.0" ZR="0.0"&gt;&lt;/bone&gt;<br>
 > 
->   &lt;bone ConnectId = "11" name = "LeftShoulder" X="X" Y="-Y" Z="-Z" XR="0.0" YR="-90.0" ZR="180.0"&gt;&lt;/bone&gt;
->   &lt;bone ConnectId = "12" name = "LeftArm" X="X" Y="-Y" Z="-Z" XR="0.0" YR="0.0" ZR="0.0"&gt;&lt;/bone&gt;
->   &lt;bone ConnectId = "13" name = "LeftForeArm" X="X" Y="-Y" Z="-Z" XR="0.0" YR="0.0" ZR="0.0"&gt;&lt;/bone&gt;
->   &lt;bone ConnectId = "14" name = "LeftHand" X="X" Y="Z" Z="-Y" XR="-90.0" YR="0.0" ZR="0.0"&gt;&lt;/bone&gt;
+>   &lt;bone ConnectId = "11" name = "LeftShoulder" X="X" Y="-Y" Z="-Z" XR="0.0" YR="-90.0" ZR="180.0"&gt;&lt;/bone&gt;<br>
+>   &lt;bone ConnectId = "12" name = "LeftArm" X="X" Y="-Y" Z="-Z" XR="0.0" YR="0.0" ZR="0.0"&gt;&lt;/bone&gt;<br>
+>   &lt;bone ConnectId = "13" name = "LeftForeArm" X="X" Y="-Y" Z="-Z" XR="0.0" YR="0.0" ZR="0.0"&gt;&lt;/bone&gt;<br>
+>   &lt;bone ConnectId = "14" name = "LeftHand" X="X" Y="Z" Z="-Y" XR="-90.0" YR="0.0" ZR="0.0"&gt;&lt;/bone&gt;<br>
 > 
->   &lt;bone ConnectId = "15" name = "RightUpLeg" X="-Z" Y="Y" Z="X" XR="0.0" YR="180.0" ZR="0.0"&gt;&lt;/bone&gt;
->   &lt;bone ConnectId = "16" name = "RightLeg" X="-Z" Y="Y" Z="X" XR="0.0" YR="0.0" ZR="0.0"&gt;&lt;/bone&gt;
->   &lt;bone ConnectId = "17" name = "RightFoot" X="-Z" Y="Y" Z="X" XR="0.0" YR="0.0" ZR="0.0"&gt;&lt;/bone&gt;
->   &lt;bone ConnectId = "18" name = "RightToeBase" X="-Z" Y="Y" Z="X" XR="0.0" YR="0.0" ZR="-90.0"&gt;&lt;/bone&gt;
+>   &lt;bone ConnectId = "15" name = "RightUpLeg" X="-Z" Y="Y" Z="X" XR="0.0" YR="180.0" ZR="0.0"&gt;&lt;/bone&gt;<br>
+>   &lt;bone ConnectId = "16" name = "RightLeg" X="-Z" Y="Y" Z="X" XR="0.0" YR="0.0" ZR="0.0"&gt;&lt;/bone&gt;<br>
+>   &lt;bone ConnectId = "17" name = "RightFoot" X="-Z" Y="Y" Z="X" XR="0.0" YR="0.0" ZR="0.0"&gt;&lt;/bone&gt;<br>
+>   &lt;bone ConnectId = "18" name = "RightToeBase" X="-Z" Y="Y" Z="X" XR="0.0" YR="0.0" ZR="-90.0"&gt;&lt;/bone&gt;<br>
 > 
->   &lt;bone ConnectId = "19" name = "LeftUpLeg" X="-Z" Y="Y" Z="X" XR="0.0" YR="-180.0" ZR="0.0"&gt;&lt;/bone&gt;
->   &lt;bone ConnectId = "20" name = "LeftLeg" X="-Z" Y="Y" Z="X" XR="0.0" YR="0.0" ZR="0.0"&gt;&lt;/bone&gt;
->   &lt;bone ConnectId = "21" name = "LeftFoot" X="-Z" Y="Y" Z="X" XR="0.0" YR="0.0" ZR="0.0"&gt;&lt;/bone&gt;
->   &lt;bone ConnectId = "22" name = "LeftToeBase" X="-Z" Y="Y" Z="X" XR="0.0" YR="0.0" ZR="-90.0"&gt;&lt;/bone&gt;
+>   &lt;bone ConnectId = "19" name = "LeftUpLeg" X="-Z" Y="Y" Z="X" XR="0.0" YR="-180.0" ZR="0.0"&gt;&lt;/bone&gt;<br>
+>   &lt;bone ConnectId = "20" name = "LeftLeg" X="-Z" Y="Y" Z="X" XR="0.0" YR="0.0" ZR="0.0"&gt;&lt;/bone&gt;<br>
+>   &lt;bone ConnectId = "21" name = "LeftFoot" X="-Z" Y="Y" Z="X" XR="0.0" YR="0.0" ZR="0.0"&gt;&lt;/bone&gt;<br>
+>   &lt;bone ConnectId = "22" name = "LeftToeBase" X="-Z" Y="Y" Z="X" XR="0.0" YR="0.0" ZR="-90.0"&gt;&lt;/bone&gt;<br>
 > &lt;/ActorBones&gt;
 
 
@@ -259,7 +259,7 @@ MotionVenus可以驱动的骨骼标准为本文2.2节中[表1]所列的骨骼数
 将需要控制的骨骼名称写入xml文件中的name栏中，并确定对应部位正确。如下图所示：
 
 <div align=center>
-<img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/img/namelink.jpg"/>
+<img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/v1.3.6/help/img/namelink.jpg"/>
 </div>
 
 ### 4.4.5 第三步：写入初始角度
