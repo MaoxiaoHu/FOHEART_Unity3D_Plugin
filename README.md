@@ -186,8 +186,8 @@ MotionVenus可以驱动的骨骼标准为本文2.2节中[表1]所列的骨骼数
 - 单独的头部运动。
 ### 4.4.1 建模建议
 在MotionVenus中，以模型T-POSE为起始旋转输出每段骨骼相对于父骨骼的相对（Local）旋转值或相对于世界坐标的全局（Global）旋转值。所以在建模及绑定蒙皮时，建议使用T-Pose进行建模，要保证在T-Pose时模型肩部无耸起、拉扯等情况。<br>
-[[什么是T-Pose?]](http://manual.reallusion.com/3DXchange_6/ENU/Pipeline/04_Modify_Page/Character_Section/Manually_Setting_T_Pose.htm)或[[离线版]](https://github.com/FOHEART/FOHEART_Unity3D_Plugin/blob/master/help/Manually_Setting_T-Pose.pdf)<br>
-[[为什么使用T-Pose?]](https://github.com/FOHEART/FOHEART_Unity3D_Plugin/blob/master/help/whytpose.md)
+[[什么是T-Pose?]](http://manual.reallusion.com/3DXchange_6/ENU/Pipeline/04_Modify_Page/Character_Section/Manually_Setting_T_Pose.htm)或[[离线版]](https://github.com/FOHEART/FOHEART_Unity3D_Plugin/blob/v1.3.6/help/Manually_Setting_T-Pose.pdf)<br>
+[[为什么使用T-Pose?]](https://github.com/FOHEART/FOHEART_Unity3D_Plugin/blob/v1.3.6/help/whytpose.md)
 
 ### 4.4.2 配置文件说明
 每一个需要控制运动的模型，当添加完FoheartModel.cs脚本之后，需要唯一绑定一个xml配置文件，如下图：
