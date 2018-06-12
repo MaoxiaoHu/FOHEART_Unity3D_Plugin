@@ -266,9 +266,19 @@ MotionVenus可以驱动的骨骼标准为本文2.2节中[表1]所列的骨骼数
 将T-POSE中的每段骨骼的初始姿态角，填入与其对应的配置文件行中。也就是配置文件中对应行中的XR YR ZR值。如下图所示：
 
 <center>默认模型配置，仅供参考</center>
+
 <div align=center>
 <img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/v1.3.6/help/img/xryrzr.jpg"/>
 </div>
+
+例如：选中左肩，选择Local坐标系，其初始角度为(0,-90,180)：
+
+<div align=center>
+<img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/v1.3.6/help/img/leftshoulderangle.png"/>
+</div>
+
+将其填入xml文件中代表左肩的行，得到：
+>   &lt;bone ConnectId = "11" name = "LeftShoulder" X="X" Y="-Y" Z="-Z" XR="0.0" YR="-90.0" ZR="180.0"&gt;&lt;/bone&gt;
 
 ### 4.4.6 第四步：确定旋转顺序
 选择每段骨骼的Local坐标，在下图中A11~A64中找到与之完全对应的旋转顺序：
@@ -279,6 +289,7 @@ MotionVenus可以驱动的骨骼标准为本文2.2节中[表1]所列的骨骼数
 
 文字版：
 <center>表2：骨骼初始坐标轴</center>
+
 <div align=center>
 <table>
    <tr><th>A11</th><th>X="X" Y="-Z" Z="Y"</th><th>A12</th><th>X="X" Y="Y" Z="Z"</th><th>A13</th><th>X="X" Y="Z" Z="-Y"</th><th>A14</th><th>X="X" Y="-Y" Z="-Z"</th></tr>
@@ -296,7 +307,7 @@ MotionVenus可以驱动的骨骼标准为本文2.2节中[表1]所列的骨骼数
 <img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/v1.3.6/help/img/coordlink.jpg"/>
 </div>
 
-任选其一：例如选中右小腿，选择Local坐标系，找到与之完全相同的旋转顺序A34，则旋转顺序表示为：X="-Z" Y="Y" Z="X"：
+例如：选中右小腿，选择Local坐标系，找到与之完全相同的旋转顺序A34，则旋转顺序表示为：X="-Z" Y="Y" Z="X"：
 
 <div align=center>
 <img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/v1.3.6/help/img/rightlegexample.jpg"/>
