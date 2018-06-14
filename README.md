@@ -320,7 +320,11 @@ MotionVenus可以驱动的骨骼标准为本文2.2节中[表1]所列的骨骼数
 
 ### 4.4.7 转换实例
 [【实例1】](https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/v1.3.6/help/bindingexample1.md)
+### 4.4.8 关于工程打包
+Unity工程编译打包生成exe之后，需将模型绑定的xml文件放置到与.exe相同的目录下，一般是工程根目录。
+
 # 五、注意事项
 插件使用时，需要注意以下地方：
 1. 在模型绑定过程中，需要首先将模型调整到标准的T姿势，并且人物正面朝向Unity3D的Z轴正方向。
 2. 使用Unity3D的过程中MotionVenus不可最小化。
+
