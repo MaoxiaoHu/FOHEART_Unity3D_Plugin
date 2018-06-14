@@ -63,6 +63,7 @@
 </table>
 </div>
 
+更加详细的骨骼与人体真实位置参考图，请看[[这里]](https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/v1.3.6/master/bonebindhelp.md)。
 
 需要将模型的对应骨骼名称填写在xml文件的name栏中，即可对这段骨骼进行旋转控制。
 ## 2.3 非标准骨骼绑定
