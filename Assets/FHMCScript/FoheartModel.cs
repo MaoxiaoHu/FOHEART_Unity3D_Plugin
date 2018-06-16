@@ -326,16 +326,23 @@ namespace FoheartMC
                     (data.bonePositions[0].z+HipsStartLocation.y) * scale,
                     (-data.bonePositions[0].y+HipsStartLocation.z) * scale
 				              );
-				for (int i = 0; i < 23; i++) {
-					Byte ind = (Byte)i;
-					BonesLocation [i].Set (data.bonePositions[ind].x,data.bonePositions[ind].x,data.bonePositions[ind].x);
-					//SensorAccel [i].Set (data.sensorAccels [ind].x, data.sensorAccels [ind].y, data.sensorAccels [ind].z);
-				}
-				for (int i = 0; i < 23; i++) {
-					Byte ind = (Byte)i;
-					//BonesLocation [i].Set (data.bonePositions[ind].x,data.bonePositions[ind].x,data.bonePositions[ind].x);
-					SensorAccel [i].Set (data.sensorAccels [ind].x, data.sensorAccels [ind].y, data.sensorAccels [ind].z);
-				}
+                if(data.isBonePositions)
+                {
+                    for (int i = 0; i < 23; i++)
+                    {
+                        Byte ind = (Byte)i;
+                        BonesLocation[i].Set(data.bonePositions[ind].x, data.bonePositions[ind].x, data.bonePositions[ind].x);
+                    }
+                }
+                if(data.isSensorAccels)
+                {
+                    for (int i = 0; i < 23; i++)
+                    {
+                        Byte ind = (Byte)i;
+                        //BonesLocation [i].Set (data.bonePositions[ind].x,data.bonePositions[ind].x,data.bonePositions[ind].x);
+                        SensorAccel[i].Set(data.sensorAccels[ind].x, data.sensorAccels[ind].y, data.sensorAccels[ind].z);
+                    }
+                }
                 if (FixHipsLocation)
                 {
                 }
