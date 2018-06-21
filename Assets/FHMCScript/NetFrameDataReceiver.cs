@@ -25,6 +25,8 @@ namespace FoheartMC
         public bool BoneEuler;
         public bool BoneQuat;
 		public bool SensorAccel;
+        public bool SensorGyro;
+        public bool SensorMag;
         //调试文本
         string OutText;
 
@@ -63,7 +65,7 @@ namespace FoheartMC
         public void OnClickCalibration_standard()
         {
             //模型名称
-            string CurActorName = GameObject.Find("Canvas/ActorName").GetComponent<InputField>().text;
+            string CurActorName = GameObject.Find("Canvas/Edit_ActorName").GetComponent<InputField>().text;
 
             if (CurActorName == "")
             {

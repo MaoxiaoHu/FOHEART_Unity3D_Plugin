@@ -20,7 +20,8 @@ namespace FoheartMC
         public string ConfigName;
 
         //是否使用远程位移
-        public Vector3 HipsStartLocation;
+        public Vector3 LocationOffsetXYZ = new Vector3(0.0f, 0.0f, 0.0f);
+        public Vector3 LocationScaleXYZ = new Vector3(1.0f, 1.0f, 1.0f);
 		public bool FixHipsLocation;
 
 		public String[] BonesName;
@@ -134,11 +135,13 @@ namespace FoheartMC
             ChildAwake();
 
             Transform HipsStartTrans = FindBone(0);
+            Debug.Log("Start Location:"+HipsStartTrans.position.x+" "+HipsStartTrans.position.y+" "+HipsStartTrans.position.z);
             if (HipsStartTrans == null)
             {
                 Debug.LogError("Please check Config Name is Right or ConnectId's name is valid in Model!");
             }
-            HipsStartLocation = HipsStartLocation;// +new Vector3(HipsStartTrans.position.x, HipsStartTrans.position.y, HipsStartTrans.position.z);
+            //SetLocationOffset = SetLocationOffset;// +new Vector3(HipsStartTrans.position.x, HipsStartTrans.position.y, HipsStartTrans.position.z);
+           // SetLocationOffset = new Vector3(HipsStartTrans.position.x, HipsStartTrans.position.y, HipsStartTrans.position.z);
         }
 
 
@@ -320,11 +323,11 @@ namespace FoheartMC
             if (BoneHip)
             {
                 Vector3 LocInUnity = new Vector3();
-                UInt32 scale = 1;
+                
                 LocInUnity.Set(
-                    (-data.bonePositions[0].x + HipsStartLocation.x) * scale,
-                    (data.bonePositions[0].z+HipsStartLocation.y) * scale,
-                    (-data.bonePositions[0].y+HipsStartLocation.z) * scale
+                    ((-data.bonePositions[0].x) + (LocationOffsetXYZ.x)) * LocationScaleXYZ.x,
+                    ((data.bonePositions[0].z) + (LocationOffsetXYZ.y)) * LocationScaleXYZ.y,
+                    ((-data.bonePositions[0].y) + (LocationOffsetXYZ.z)) * LocationScaleXYZ.z
 				              );
                 if(data.isBonePositions)
                 {
