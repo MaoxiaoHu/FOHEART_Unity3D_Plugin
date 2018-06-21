@@ -83,14 +83,31 @@
 <img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/img/bindreceiver.png"/>
 </div>
 
+其中：
 
-UDP Port的设定需要与MotionVenus中的设定相同，如果在MotionVenus中没有设置远程地址，可以在IP地址栏中输入远程地址的IP，在端口中输入远程地址的端口，然后点击添加按钮，这个地址就被添加到了发送列表。
+<div align=center>
+<table>
+   <tr><th>选项</th><th>功能</th></tr>
+   <tr><th>UDP_Target_IP</th><th>反向控制MotionVenus，代表对方运行MotionVenus的PC机的IP地址</th></tr>
+	<tr><th>UDP_Target_Port</th><th>反向控制MotionVenus，代表对方运行MotionVenus的PC机的Port端口</th></tr>
+<tr><th>UDPPort</th><th>MotionVenus控制本机，代表本机绑定的端口，需要与MotionVenus中的设置相同</th></tr>
+<tr><th>BonePosition</th><th>使能模型的位移（默认使能）</th></tr>
+<tr><th>BoneEuler</th><th>使用欧拉角驱动骨骼运动（默认使能）</th></tr>
+<tr><th>BoneQuat</th><th>使用四元数驱动骨骼运动（默认不使能）</th></tr>
+<tr><th>SensorAccel</th><th>接收原始加速度计的输出值（默认不使能）</th></tr>
+<tr><th>SensorGyro</th><th>接收原始陀螺仪的输出值（默认不使能）</th></tr>
+<tr><th>SensorMag</th><th>接收原始磁力计的输出值（默认不使能）</th></tr>
+
+</table>
+</div>
+
+其中，UDPPort的设定需要与MotionVenus中的设定相同，如果在MotionVenus中没有设置远程地址，可以在IP地址栏中输入远程地址的IP，在端口中输入远程地址的端口，然后点击添加按钮，这个地址就被添加到了发送列表。
 
 <div align=center>
 <img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/img/mvremoteipport.png"/>
 </div>
 
-Position、Euler、Quat的设定需要与**MotionVenus**中的转发规则设置中位移、欧拉角、四元数的选择保持一致，例如：
+BonePosition、BoneEuler、BoneQuat**MotionVenus**中的转发规则设置中位移、欧拉角、四元数的选择保持一致，例如：
 
 <div align=center>
 <img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/img/mvtransrule.png"/>

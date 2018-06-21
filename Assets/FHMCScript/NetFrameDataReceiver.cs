@@ -11,7 +11,7 @@ namespace FoheartMC
     public class NetFrameDataReceiver : MonoBehaviour
     {
         //UDP命令下发IP地址
-        public string UDP_TargetIP = "127.0.0.1";
+        public string UDP_Target_IP = "127.0.0.1";
         public int UDP_Target_Port = 5002;
         //UDP广播接收端口
         public int UDPPort;
@@ -180,7 +180,7 @@ namespace FoheartMC
                 System.Buffer.BlockCopy(byteArrayData, 0, TotalData, sendBytes1.Length, byteArrayData.Length);
                 System.Buffer.BlockCopy(sendBytes2, 0, TotalData, sendBytes1.Length + byteArrayData.Length, sendBytes2.Length);
 
-                udpSender.Send(TotalData, TotalData.Length, UDP_TargetIP, UDP_Target_Port);
+                udpSender.Send(TotalData, TotalData.Length, UDP_Target_IP, UDP_Target_Port);
 
             }
             catch (Exception s)
