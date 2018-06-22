@@ -28,7 +28,7 @@ namespace FoheartMC
         public bool SensorGyro;
         public bool SensorMag;
         //调试文本
-        string OutText;
+        //string OutText;
 
         public UI_Calibrate Calibrate;
         
@@ -39,6 +39,8 @@ namespace FoheartMC
             BoneEuler = true;
             BoneQuat = false;
 			SensorAccel = false;
+            SensorMag = false;
+            SensorGyro = false;
             udpSender = new System.Net.Sockets.UdpClient();
             
         }
@@ -57,7 +59,7 @@ namespace FoheartMC
         //UI界面
         void OnGUI()
         {
-            GUI.Label(new Rect(0, 0, 100, 50), OutText);
+           // GUI.Label(new Rect(0, 0, 100, 50), OutText);
 
             Calibrate.ShowCalibrateTips();
 
@@ -139,7 +141,7 @@ namespace FoheartMC
 
                     }else
                     {
-						int dataErro = frameDataTemp.deComposeData(data, BonePosition, BoneEuler, BoneQuat,SensorAccel);
+						int dataErro = frameDataTemp.deComposeData(data, BonePosition, BoneEuler, BoneQuat,SensorAccel,SensorMag,SensorGyro);
                         if (dataErro != 0)
                         {
                             Debug.Log("Data Erro:" + dataErro);

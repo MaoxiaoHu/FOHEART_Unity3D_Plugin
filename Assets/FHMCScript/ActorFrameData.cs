@@ -30,10 +30,14 @@ namespace FoheartMC
         Dictionary<Byte, Vector3> boneRotEuler;
         public Dictionary<Byte, Vector3> bonePositions;
         public Dictionary<Byte, Vector3> sensorAccels;
+        public Dictionary<Byte, Vector3> sensorMags;
+        public Dictionary<Byte, Vector3> sensorGyros;
         public bool isBoneRotQuat;
         public bool isBoneRotEuler;
         public bool isBonePositions;
         public bool isSensorAccels;
+        public bool isSensorMag;
+        public bool isSensorGyro;
 
         private const UInt16 EulerScale = (1 << 7);
         private const UInt16 QuatScale = (1 << 8);
@@ -48,15 +52,19 @@ namespace FoheartMC
             boneRotEuler = new Dictionary<Byte, Vector3>();
             bonePositions = new Dictionary<Byte, Vector3>();
             sensorAccels = new Dictionary<Byte, Vector3>();
+            sensorMags = new Dictionary<Byte, Vector3>();
+            sensorGyros = new Dictionary<Byte, Vector3>();
         }
 
         //解析data中的数据
-        public int deComposeData(byte[] data, bool containPos, bool containEuler, bool containQuat, bool containSensorAccel)
+        public int deComposeData(byte[] data, bool containPos, bool containEuler, bool containQuat, bool containSensorAccel, bool containSensorMag, bool containSensorGyro)
         {
             isBoneRotQuat = containQuat;
             isBoneRotEuler = containEuler;
             isBonePositions = containPos;
             isSensorAccels = containSensorAccel;
+            isSensorMag = containSensorMag;
+            isSensorGyro = containSensorGyro;
 
             int index = 0;
             //协议版本号必须与主程序相同
@@ -96,6 +104,10 @@ namespace FoheartMC
             { checkDataLength += boneCount * (4 * Marshal.SizeOf(new Int16())); }
             if (containSensorAccel)
             { checkDataLength += boneCount * (3 * Marshal.SizeOf(new Int16())); }
+            if (containSensorMag)
+            { checkDataLength += boneCount * (3 * Marshal.SizeOf(new Int16())); }
+            if (containSensorGyro)
+            { checkDataLength += boneCount * (3 * Marshal.SizeOf(new Int16())); }
 
             if (checkDataLength != data.Length)
             {
@@ -110,6 +122,8 @@ namespace FoheartMC
             boneRotEuler.Clear();
             boneRotQuat.Clear();
             sensorAccels.Clear();
+            sensorMags.Clear();
+            sensorGyros.Clear();
             for (byte i = 0; i < boneCount; i++)
             {
                 if (containPos)
@@ -166,6 +180,28 @@ namespace FoheartMC
                     index += Marshal.SizeOf(new Int16());
                     sensorAccels.Add(i, sensorAccelTemp);
                 }
+                if (containSensorMag)
+                {
+                    Vector3 sensorAccelTemp = new Vector3();
+                    sensorAccelTemp.x = (float)BitConverter.ToInt16(data, index) / AccelScale;
+                    index += Marshal.SizeOf(new Int16());
+                    sensorAccelTemp.y = (float)BitConverter.ToInt16(data, index) / AccelScale;
+                    index += Marshal.SizeOf(new Int16());
+                    sensorAccelTemp.z = (float)BitConverter.ToInt16(data, index) / AccelScale;
+                    index += Marshal.SizeOf(new Int16());
+                    sensorMags.Add(i, sensorAccelTemp);
+                }
+                if (containSensorGyro)
+                {
+                    Vector3 sensorAccelTemp = new Vector3();
+                    sensorAccelTemp.x = (float)BitConverter.ToInt16(data, index) / AccelScale;
+                    index += Marshal.SizeOf(new Int16());
+                    sensorAccelTemp.y = (float)BitConverter.ToInt16(data, index) / AccelScale;
+                    index += Marshal.SizeOf(new Int16());
+                    sensorAccelTemp.z = (float)BitConverter.ToInt16(data, index) / AccelScale;
+                    index += Marshal.SizeOf(new Int16());
+                    sensorGyros.Add(i, sensorAccelTemp);
+                }
             }
             return 0;//解析正确
         }
@@ -182,6 +218,14 @@ namespace FoheartMC
             other.boneRotQuat = new Dictionary<byte, Quaternion>(boneRotQuat);
             other.bonePositions = new Dictionary<byte, Vector3>(bonePositions);
             other.sensorAccels = new Dictionary<byte, Vector3>(sensorAccels);
+            other.sensorMags = new Dictionary<byte, Vector3>(sensorMags);
+            other.sensorGyros = new Dictionary<byte, Vector3>(sensorGyros);
+            other.isBoneRotQuat = isBoneRotQuat;
+            other.isBoneRotEuler = isBoneRotEuler;
+            other.isBonePositions = isBonePositions;
+            other.isSensorAccels = isSensorAccels;
+            other.isSensorMag = isSensorMag;
+            other.isSensorGyro = isSensorGyro;
         }
 
         public int PROTOCOL_NOMATCH { get; set; }
