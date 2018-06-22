@@ -323,12 +323,23 @@ namespace FoheartMC
             if (BoneHip)
             {
                 Vector3 LocInUnity = new Vector3();
-                
-                LocInUnity.Set(
+                if (data.isBonePositions)
+                {
+                    LocInUnity.Set(
                     ((-data.bonePositions[0].x) + (LocationOffsetXYZ.x)) * LocationScaleXYZ.x,
                     ((data.bonePositions[0].z) + (LocationOffsetXYZ.y)) * LocationScaleXYZ.y,
                     ((-data.bonePositions[0].y) + (LocationOffsetXYZ.z)) * LocationScaleXYZ.z
-				              );
+                              );
+                }
+                else
+                {
+                    LocInUnity.Set(
+                    (0 + (LocationOffsetXYZ.x)) * LocationScaleXYZ.x,
+                    (0 + (LocationOffsetXYZ.y)) * LocationScaleXYZ.y,
+                    (0.96f + (LocationOffsetXYZ.z)) * LocationScaleXYZ.z
+                              );
+                }
+                
                 if(data.isBonePositions)
                 {
                     for (int i = 0; i < 23; i++)
@@ -344,6 +355,24 @@ namespace FoheartMC
                         Byte ind = (Byte)i;
                         //BonesLocation [i].Set (data.bonePositions[ind].x,data.bonePositions[ind].x,data.bonePositions[ind].x);
                         SensorAccel[i].Set(data.sensorAccels[ind].x, data.sensorAccels[ind].y, data.sensorAccels[ind].z);
+                    }
+                }
+                if (data.isSensorMag)
+                {
+                    for (int i = 0; i < 23; i++)
+                    {
+                        Byte ind = (Byte)i;
+                        //BonesLocation [i].Set (data.bonePositions[ind].x,data.bonePositions[ind].x,data.bonePositions[ind].x);
+                        SensorMag[i].Set(data.sensorMags[ind].x, data.sensorMags[ind].y, data.sensorMags[ind].z);
+                    }
+                }
+                if (data.isSensorGyro)
+                {
+                    for (int i = 0; i < 23; i++)
+                    {
+                        Byte ind = (Byte)i;
+                        //BonesLocation [i].Set (data.bonePositions[ind].x,data.bonePositions[ind].x,data.bonePositions[ind].x);
+                        SensorGyro[i].Set(data.sensorGyros[ind].x, data.sensorGyros[ind].y, data.sensorGyros[ind].z);
                     }
                 }
                 if (FixHipsLocation)

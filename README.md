@@ -335,9 +335,8 @@ Unity工程编译打包生成exe之后，需将模型绑定的xml文件放置到
 1. 如何绑定并驱动多个模型运动？<br>
 详细教程请见：[【链接】](https://github.com/FOHEART/FOHEART_Unity3D_Plugin/blob/master/help/multiActor.md)
 
-2. 如何使用Unity3D反向控制MotionVenus开始校准动作？<br>
-使用MotionVenus可以反向控制MotionVenus开始校准动作，适用于当U3D工程全屏运行时，不必反复在MotionVenus与U3D之间切换。<br>
-详细教程请见：[【链接】](https://github.com/FOHEART/FOHEART_Unity3D_Plugin/blob/master/help/invCtl.md)
+2.使用Unity3D反向
+
 
 # 六、注意事项
 插件使用时，需要注意以下地方：

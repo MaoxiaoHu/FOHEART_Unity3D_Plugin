@@ -39,6 +39,8 @@ namespace FoheartMC
             BoneEuler = true;
             BoneQuat = false;
 			SensorAccel = false;
+            SensorMag = false;
+            SensorGyro = false;
             udpSender = new System.Net.Sockets.UdpClient();
             
         }
@@ -139,7 +141,7 @@ namespace FoheartMC
 
                     }else
                     {
-						int dataErro = frameDataTemp.deComposeData(data, BonePosition, BoneEuler, BoneQuat,SensorAccel);
+						int dataErro = frameDataTemp.deComposeData(data, BonePosition, BoneEuler, BoneQuat,SensorAccel,SensorMag,SensorGyro);
                         if (dataErro != 0)
                         {
                             Debug.Log("Data Erro:" + dataErro);
