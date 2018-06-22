@@ -331,12 +331,20 @@ MotionVenus可以驱动的骨骼标准为本文2.2节中[表1]所列的骨骼数
 ### 4.4.8 关于工程打包
 Unity工程编译打包生成exe之后，需将模型绑定的xml文件放置到与.exe相同的目录下，一般是工程根目录。
 
-# 五、注意事项
+# 五、其它使用教程
+1. 如何绑定并驱动多个模型运动？<br>
+详细教程请见：[【链接】](https://github.com/FOHEART/FOHEART_Unity3D_Plugin/blob/master/help/multiActor.md)
+
+2. 如何使用Unity3D反向控制MotionVenus开始校准动作？<br>
+使用MotionVenus可以反向控制MotionVenus开始校准动作，适用于当U3D工程全屏运行时，不必反复在MotionVenus与U3D之间切换。<br>
+详细教程请见：[【链接】](https://github.com/FOHEART/FOHEART_Unity3D_Plugin/blob/master/help/invCtl.md)
+
+# 六、注意事项
 插件使用时，需要注意以下地方：
 1. 在模型绑定过程中，需要首先将模型调整到标准的T姿势，并且人物正面朝向Unity3D的Z轴正方向。
 2. 使用Unity3D的过程中MotionVenus不可最小化。
 
-# 六、Q&A
+# 七、Q&A
 1. 如果模型的骨骼数目大于23段，比如背部骨骼有5段如何操作？<br>
 需要将背部骨骼中的某两段合为一段控制，由于在Unity3D中旋转父骨骼会带动它所有的子节点旋转，所以只需要将父骨骼的名称填到xml文件中即可，最后要保证所有骨骼数目小于等于23段。
 2. 如果模型的骨骼数目小于23段，比如背部骨骼只有2段如何操作？<br>
@@ -347,5 +355,3 @@ Unity工程编译打包生成exe之后，需将模型绑定的xml文件放置到
 &lt;bone ConnectId="3" name="Spine1" X="Z" Y="Y" Z="-X" XR="0.0" YR="0.0" ZR="0.0"&gt;&lt;/bone&gt;
 
 在这里首先去掉了1 2 4这三段骨骼，因为模型中没有这三段骨骼，因此也就相当于用标准模型的T8~T11段骨骼运动代替了模型的Spine1段骨骼运动，当然也可以使用索引1或2（如果模型的Spine1段骨骼比较靠下接近胯部）或4（如果模型的Spine1段骨骼比较靠上接近颈部），需要根据实际情况而定。<br>
-3. 如何驱动多个模型运动？<br>
-详细教程请见：[【链接】](https://github.com/FOHEART/FOHEART_Unity3D_Plugin/blob/master/help/multiActor.md)
