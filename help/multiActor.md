@@ -24,7 +24,7 @@ MotionVenus可以实时或者离线驱动Unity3D中的一个或者多个模型�
 </div>
 
 ## 五、Unity3D端绑定
-在这里，我们假设使用NPC2数据流控制FoActorRig运动，使用wushu_3_30控制FoActorRig2运动，那么设置如下：
+在这里，我们假设使用NPC2数据流控制FoActorRig运动，使用wushu_3_30控制FoActorRig2运动，那么设置如下：<br>
 （1）设置FoActorRig的脚本中Actor Name为**NPC2**。<br>
 （2）设置FoActorRig2的脚本中Actor Name为**wushu_3_30**。<br>
 
@@ -43,8 +43,8 @@ MotionVenus可以实时或者离线驱动Unity3D中的一个或者多个模型�
 <img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/multiActor/run.png"/>
 </div>
 
-## Q&A:
-1. 最多可以控制多少模型运动？
+## 七、Q&A:
+1. 最多可以控制多少组模型运动？<br>
 MotionVenus最多可以发送4组实时数据流、或者5组离线数据流到Unity3D。但是在Unity3D端可以将多个模型绑定到一组数据流上。
-2. 可以分别控制每个模型的起始位置与大小吗？
+2. 可以分别控制每个模型的起始位置与大小吗？<br>
 可以。设置每个模型控制脚本中的**Location Offset XYZ**与**Location Scale XYZ**实现。
