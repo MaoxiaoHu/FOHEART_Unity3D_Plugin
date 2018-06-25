@@ -1,6 +1,6 @@
 # 如何使用Unity3D反向控制MotionVenus？
 ## 一、简介
-在某些预先编译完成的Unity3D工程运行时，不方便在MotionVenus与Unity3D之间反复切换，这事可以使用我们提供的Unity3D脚本实现反向控制MotionVenus完成人物校准动作。
+在某些预先编译完成的Unity3D工程运行时，不方便在MotionVenus与Unity3D之间反复切换，这时可以使用我们提供的Unity3D脚本实现反向控制MotionVenus完成人物校准动作。
 ## 二、使用准备
 穿戴准备好FOHEART C1套装，并打开MotionVenus软件，可以看到左侧设备栏出现套装Actor1(Live)，如下：
 
