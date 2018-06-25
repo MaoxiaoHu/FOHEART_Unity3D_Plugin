@@ -338,6 +338,9 @@ Unity工程编译打包生成exe之后，需将模型绑定的xml文件放置到
 2. 如何使用Unity3D反向控制MotionVenus？<br>
 详细教程请见：[【链接】](https://github.com/FOHEART/FOHEART_Unity3D_Plugin/blob/master/help/invCtl.md)
 
+3. 绑定后的模型滑步/浮空或者脚部在地面下等问题如何解决？<br>
+详细教程请见：[【链接】](https://github.com/FOHEART/FOHEART_Unity3D_Plugin/blob/master/help/footslide.md)
+
 # 六、注意事项
 插件使用时，需要注意以下地方：
 1. 在模型绑定过程中，需要首先将模型调整到标准的T姿势，并且人物正面朝向Unity3D的Z轴正方向。
