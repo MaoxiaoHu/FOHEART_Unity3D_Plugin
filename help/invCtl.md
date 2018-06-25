@@ -5,14 +5,14 @@
 穿戴准备好FOHEART C1套装，并打开MotionVenus软件，可以看到左侧设备栏出现套装Actor1(Live)，如下：
 
 <div align=center>
-<img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/img/invCtl/devicelist.png"/>
+<img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/invCtl/devicelist.png"/>
 </div>
 
 ## 三、Unity3D端配置
 点击运行Unity3D工程，在Edit_ActorName控件中填入第二步中的套装名称Actor1(Live)，然后点击校准按钮并依照提示做出相应校准动作即可：
 
 <div align=center>
-<img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/img/invCtl/config.png"/>
+<img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/invCtl/config.png"/>
 </div>
 
 ## 四、注意事项
@@ -29,5 +29,5 @@
 </div>
 
 <div align=center>
-<img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/img/invCtl/ipport.png"/>
+<img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/invCtl/ipport.png"/>
 </div>
