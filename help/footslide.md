@@ -27,3 +27,14 @@
 <div align=center>
 <img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/footslide/locationoffset.png"/>
 </div>
+
+## 五、设置XY轴倍率值
+选中绑定的模型，在右侧设置Location Scale XYZ：
+在设置完成胯高之后，若H2小于H1，则模型运动时，会出现走路过快的情形，若H2大于H1则会出现模型运动过慢的情形，这时需要缩放XY轴运动的倍率为H2/H1。
+
+<div align=center>
+<img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/footslide/locationscale.png"/>
+</div>
+
+## 六、细节调整
+由于建模过程中造成的胯高并不是真正的位于实际胯高，或者由于蒙皮导致的胯高实际位置不一致，还需要按照实际情况调整Location Offset XYZ与Location Scale XYZ的值。
