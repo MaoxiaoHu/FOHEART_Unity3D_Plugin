@@ -31,7 +31,7 @@ Email£ºcontact@foheart.com<br>
 <img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/img/address1.png"/>
 </div>
 
-**Copyright ? FOHEART Co., Ltd. 2015-2018. All rights reserved.**<br>
+**Copyright(C) FOHEART Co., Ltd. 2015-2018. All rights reserved.**<br>
 
 <div align=center>
 <img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/img/softwareName.png"/>
@@ -59,7 +59,8 @@ Email£ºcontact@foheart.com<br>
 1. **NetFrameDataReceiver.cs**ÓÃÓÚ½ÓÊÕÀ´×ÔMotionVenusÈí¼þµÄÍøÂçÊý¾ÝÁ÷£¬ÐèÒª½«Æä°²ÖÃÔÚ³¡¾°µ±ÖÐµÄÒ»¸öµ¥¶ÀµÄÓÀ¾ÃÎïÌåÉÏ£¨2D¡¢3DÎïÌå¾ù¿É£©£¬ÀýÈçÐÂ½¨Ò»¸ö3D Object->Cube£¬ÃüÃûÎª**NetworkReceiver**½«**NetFrameDataReceiver.cs**ÍÏ¶¯µ½ËüÖ®ÉÏ¡£ÔÚÕû¸öÔËÐÐ¹ý³ÌÖÐ£¬²»Òª¶ÔNetworkReceiverÔÙ½øÐÐÆäËü²Ù×÷£¬ÒÔÃâ³öÏÖ²»¿ÉÔ¤ÁÏµÄÍøÂçÎÊÌâ¡£
 2. **FoheartModel.cs**ÓÃÓÚ¿ØÖÆÄ£ÐÍÔË¶¯¡£½«ÆäÍÏ¶¯µ½ÐèÒª¿ØÖÆÔË¶¯µÄÀàÈËÌåÄ£ÐÍÖ®ÉÏ¼´¿É¡£
 3. **ActorFrameData.cs**ÊÇÊý¾Ý½âÎöÎÄ¼þ£¬²»ÐèÒª½øÐÐ²Ù×÷¡£
-4. ÆäËû .csÎÄ¼þÊÇÒ»Ð©¶¨ÖÆ¹¦ÄÜµÄ½Å±¾ÎÄ¼þ¡£
+4. ÆäËû .csÎÄ¼þÊÇÒ»Ð©¶¨ÖÆ¹¦ÄÜµÄ½Å±¾ÎÄ¼þ¡£<br>
+
 ## 2.2 ÅäÖÃÎÄ¼þxml
 Õâ¸öÅäÖÃÎÄ¼þ¾ö¶¨ÁËÍøÂçÊý¾ÝÖÐ¹Ç÷ÀÊý¾ÝÓëÓÃ»§¹Ç÷ÀÄ£ÐÍ¹Ç÷ÀµÄ°ó¶¨¹ØÏµ£¬Ëü¾ö¶¨ÁËÈËÌå¹Ç÷ÀµÄÐý×ªºÍÎ»ÒÆ£¬Õý³£Çé¿öÏÂ£¬ÎÒÃÇÐèÒª×Ô¼º±àÐ´Õâ¸öÅäÖÃÎÄ¼þ£¬ÅäÖÃ·½·¨²ÎÕÕµÚËÄÕÂÖÐµÄÅäÖÃ·½·¨¡£<br>
 »ù±¾¸ñÊ½ÈçÏÂ£º<br>
@@ -102,20 +103,21 @@ Email£ºcontact@foheart.com<br>
 ÐèÒª½«Ä£ÐÍµÄ¶ÔÓ¦¹Ç÷ÀÃû³ÆÌîÐ´ÔÚxmlÎÄ¼þµÄnameÀ¸ÖÐ£¬¼´¿É¶ÔÕâ¶Î¹Ç÷À½øÐÐÐý×ª¿ØÖÆ¡£
 
 # Èý¡¢²å¼þÊ¹ÓÃÁ÷³Ì
-ÏÂÃæÊÇÊ¹¶¯²¶Êý¾ÝÁ÷ÔÚUnity3DÖÐÇý¶¯ÈÎÒâÄ£ÐÍµÄ¾ßÌå²½Öè£º
-1. ÐÂ½¨Ò»¸öUnity¹¤³Ì£¬»òÊÇÊ¹ÓÃÄã×Ô¼ºµÄ¹¤³Ì¡£
-2. ½«FHMCScriptÎÄ¼þ¼Ð¿½±´µ½¹¤³ÌÄ¿Â¼µÄAssetsÄ¿Â¼ÏÂ£¬½«DefaltActor.xml ¿½±´µ½¹¤³Ì¸ùÄ¿Â¼ÏÂ¡£
+ÏÂÃæÊÇÊ¹¶¯²¶Êý¾ÝÁ÷ÔÚUnity3DÖÐÇý¶¯ÈÎÒâÄ£ÐÍµÄ¾ßÌå²½Öè£º<br>
+1. ÐÂ½¨Ò»¸öUnity¹¤³Ì£¬»òÊÇÊ¹ÓÃÄã×Ô¼ºµÄ¹¤³Ì¡£<br>
+2. ½«FHMCScriptÎÄ¼þ¼Ð¿½±´µ½¹¤³ÌÄ¿Â¼µÄAssetsÄ¿Â¼ÏÂ£¬½«DefaltActor.xml ¿½±´µ½¹¤³Ì¸ùÄ¿Â¼ÏÂ¡£<br>
 3. ´´½¨Ò»¸öÈÎÒâÒ»¸ö2D»ò3DÎïÌå£¬ÔÚ±¾¹¤³ÌÖÐ£¬ÎÒÃÇ´´½¨Ò»¸öÈÝÆ÷Canvas£¬²¢ÔÚCanvasÖÐÌí¼Ó°´Å¥Button_calibration£¬²¢½«NetFrameDataReceiver.cs·ÅÖÃµ½Canvas->Button_calibrationÉÏ¡£
 
 <div align=center>
 <img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/img/addreceiver.png"/>
 </div>
 
-4. Íê³ÉµÚ3²½Ö®ºó£¬ÔÚCanvas->Button_calibrationµÄInspectorÖÐ»áÏÔÊ¾ÏÂÃæÊôÐÔ£º
+Íê³ÉµÚ3²½Ö®ºó£¬ÔÚCanvas->Button_calibrationµÄInspectorÖÐ»áÏÔÊ¾ÏÂÃæÊôÐÔ£º
 
 <div align=center>
 <img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/img/bindreceiver.png"/>
 </div>
+
 
 ÆäÖÐ£º
 
@@ -150,7 +152,7 @@ BonePosition¡¢BoneEuler¡¢BoneQuat**MotionVenus**ÖÐµÄ×ª·¢¹æÔòÉèÖÃÖÐÎ»ÒÆ¡¢Å·À­½Ç¡¢
 5. ½«TemplateÎÄ¼þ¼ÐÖÐµÄFoActorRig.fbxÍÏ·Åµ½³¡¾°ÖÐ£¬²¢ÇÒÌí¼ÓFoheartModel.csÎªComponent£¬×îÖÕÏÔÊ¾ÈçÏÂ£º
 
 <div align=center>
-<img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/img/bindmodel.png"/>
+<img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/img/bindmodel.png" width="100%"/>
 </div>
 
 ÆäÖÐActorNameÐèÒªÓëMotionVenusÖÐ¶ÔÓ¦µÄÈËÎï**Ì××°±àºÅ**Ò»ÖÂ£¬ÀýÈçÏÂÃæÕâÒ»Ì×µÄÌ××°±àºÅÊÇ**Actor1(Live)**¡£
@@ -193,7 +195,7 @@ MotionVenusÊ¹ÓÃÏÂÃæ¸ñÊ½µÄÊý¾ÝÁ÷Êä³öÈËÎïµÄ×ËÌ¬Î»ÖÃÐÅÏ¢£º
 ÔÚMotionVenusÖÐµÄ×ø±êÏµ¶¨ÒåÈçÏÂ£º
 
 <div align=center>
-<img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/img/skeletoncoord.png"/>
+<img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/img/skeletoncoord.png" width="100%"/>
 </div>
 
 ¼´MotionVenusÊ¹ÓÃÓÒÊÖ×ø±êÏµ¡£<br>
@@ -303,7 +305,7 @@ MotionVenus¿ÉÒÔÇý¶¯µÄ¹Ç÷À±ê×¼Îª±¾ÎÄ2.2½ÚÖÐ[±í1]ËùÁÐµÄ¹Ç÷ÀÊýÄ¿£¬×î´óÎª23¶Î¡£µ±È»£
 ½«ÐèÒª¿ØÖÆµÄ¹Ç÷ÀÃû³ÆÐ´ÈëxmlÎÄ¼þÖÐµÄnameÀ¸ÖÐ£¬²¢È·¶¨¶ÔÓ¦²¿Î»ÕýÈ·¡£ÈçÏÂÍ¼ËùÊ¾£º
 
 <div align=center>
-<img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/img/namelink.jpg"/>
+<img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/img/namelink.jpg" width="100%"/>
 </div>
 
 ### 4.4.5 µÚÈý²½£ºÐ´Èë³õÊ¼½Ç¶È
@@ -312,13 +314,13 @@ MotionVenus¿ÉÒÔÇý¶¯µÄ¹Ç÷À±ê×¼Îª±¾ÎÄ2.2½ÚÖÐ[±í1]ËùÁÐµÄ¹Ç÷ÀÊýÄ¿£¬×î´óÎª23¶Î¡£µ±È»£
 <center>Ä¬ÈÏÄ£ÐÍÅäÖÃ£¬½ö¹©²Î¿¼</center>
 
 <div align=center>
-<img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/img/xryrzr.jpg"/>
+<img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/img/xryrzr.jpg" width="100%"/>
 </div>
 
 ÀýÈç£ºÑ¡ÖÐ×ó¼ç£¬Ñ¡ÔñLocal×ø±êÏµ£¬Æä³õÊ¼½Ç¶ÈÎª(0,-90,180)£º
 
 <div align=center>
-<img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/img/leftshoulderangle.png"/>
+<img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/img/leftshoulderangle.png" width="100%"/>
 </div>
 
 ½«ÆäÌîÈëxmlÎÄ¼þÖÐ´ú±í×ó¼çµÄÐÐ£¬µÃµ½£º
@@ -328,7 +330,7 @@ MotionVenus¿ÉÒÔÇý¶¯µÄ¹Ç÷À±ê×¼Îª±¾ÎÄ2.2½ÚÖÐ[±í1]ËùÁÐµÄ¹Ç÷ÀÊýÄ¿£¬×î´óÎª23¶Î¡£µ±È»£
 Ñ¡ÔñÃ¿¶Î¹Ç÷ÀµÄLocal×ø±ê£¬ÔÚÏÂÍ¼ÖÐA11~A64ÖÐÕÒµ½ÓëÖ®ÍêÈ«¶ÔÓ¦µÄÐý×ªË³Ðò£º
 
 <div align=center>
-<img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/img/skeletoncoord.jpg"/>
+<img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/img/skeletoncoord.jpg" width="100%"/>
 </div>
 
 ÎÄ×Ö°æ£º
@@ -348,13 +350,13 @@ MotionVenus¿ÉÒÔÇý¶¯µÄ¹Ç÷À±ê×¼Îª±¾ÎÄ2.2½ÚÖÐ[±í1]ËùÁÐµÄ¹Ç÷ÀÊýÄ¿£¬×î´óÎª23¶Î¡£µ±È»£
 ½«¶ÔÓ¦AxxÓÒ²àËù¸½µÄX="?" Y="?" Z="?"ÌîÈë¶ÔÓ¦µÄÅäÖÃÎÄ¼þÐÐÖÐµÄÏàÓ¦Î»ÖÃ£º
 
 <div align=center>
-<img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/img/coordlink.jpg"/>
+<img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/img/coordlink.jpg" width="100%"/>
 </div>
 
 ÀýÈç£ºÑ¡ÖÐÓÒÐ¡ÍÈ£¬Ñ¡ÔñLocal×ø±êÏµ£¬ÕÒµ½ÓëÖ®ÍêÈ«ÏàÍ¬µÄÐý×ªË³ÐòA34£¬ÔòÐý×ªË³Ðò±íÊ¾Îª£ºX="-Z" Y="Y" Z="X"£º
 
 <div align=center>
-<img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/img/rightlegexample.jpg"/>
+<img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/img/rightlegexample.jpg" width="100%"/>
 </div>
 
 ½«ÆäÌîÈëxmlÎÄ¼þÖÐ´ú±íÓÒÐ¡ÍÈµÄÐÐ£¬µÃµ½£º
@@ -393,5 +395,5 @@ Unity¹¤³Ì±àÒë´ò°üÉú³ÉexeÖ®ºó£¬Ðè½«Ä£ÐÍ°ó¶¨µÄxmlÎÄ¼þ·ÅÖÃµ½Óë.exeÏàÍ¬µÄÄ¿Â¼ÏÂ£¬Ò»°
 ÔÚÕâÀïÊ×ÏÈÈ¥µôÁË1 2 4ÕâÈý¶Î¹Ç÷À£¬ÒòÎªÄ£ÐÍÖÐÃ»ÓÐÕâÈý¶Î¹Ç÷À£¬Òò´ËÒ²¾ÍÏàµ±ÓÚÓÃ±ê×¼Ä£ÐÍµÄT8~T11¶Î¹Ç÷ÀÔË¶¯´úÌæÁËÄ£ÐÍµÄSpine1¶Î¹Ç÷ÀÔË¶¯£¬µ±È»Ò²¿ÉÒÔÊ¹ÓÃË÷Òý1»ò2£¨Èç¹ûÄ£ÐÍµÄSpine1¶Î¹Ç÷À±È½Ï¿¿ÏÂ½Ó½ü¿è²¿£©»ò4£¨Èç¹ûÄ£ÐÍµÄSpine1¶Î¹Ç÷À±È½Ï¿¿ÉÏ½Ó½ü¾±²¿£©£¬ÐèÒª¸ù¾ÝÊµ¼ÊÇé¿ö¶ø¶¨¡£<br>
 
 <div align=center>
-<img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/img/tail.png"/>
+<img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/img/tail.png" width="100%"/>
 </div>
