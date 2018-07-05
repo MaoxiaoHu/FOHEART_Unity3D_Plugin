@@ -1,3 +1,36 @@
+### COPYRIGHT
+THE INFORMATION CONTAINED HERE IS PROPRIETARY TECHNICAL 
+INFORMATION OF FOHEART CO., LTD. TRANSMITTING, REPRODUCTION, 
+DISSEMINATION AND EDITING OF THIS DOCUMENT AS WELL AS 
+UTILIZATION OF THE CONTENT ARE FORBIDDEN WITHOUT PERMISSION. 
+OFFENDERS WILL BE HELD LIABLE FOR PAYMENT OF DAMAGES. ALL 
+RIGHTS ARE RESERVED IN THE EVENT OF A PATENT GRANT OR 
+REGISTRATION OF A UTILITY MODEL OR DESIGN.
+### GENERAL NOTES
+FOHEART OFFERS THE INFORMATION AS A SERVICE TO ITS CUSTOMERS. 
+THE INFORMATION PROVIDED IS BASED UPON CUSTOMERS’ 
+REQUIREMENTS. FOHEART MAKES EVERY EFFORT TO ENSURE THE 
+QUALITY OF THE INFORMATION IT MAKES AVAILABLE. FOHEART DOES 
+NOT MAKE ANY WARRANTY AS TO THE INFORMATION CONTAINED 
+HEREIN, AND DOES NOT ACCEPT ANY LIABILITY FOR ANY INJURY, LOSS 
+OR DAMAGE OF ANY KIND INCURRED BY USE OF OR RELIANCE UPON 
+THE INFORMATION. ALL INFORMATION SUPPLIED HEREIN IS SUBJECT TO 
+CHANGE WITHOUT PRIOR NOTICE.<br>
+**For technical support, please visit:**<br>
+[http://www.foheart.com/support.html](http://www.foheart.com/support.html) or<br>
+[http://www.foheart.com/question.html](http://www.foheart.com/question.html)<br>
+**北京总部**<br>
+Tel：(+86)010-56106165<br>
+Email：contact@foheart.com<br>
+地址：北京市海淀区黑山扈路红山口8号D2-南-3号<br>
+邮编：100091<br>
+
+<div align=center>
+<img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/img/address1.png"/>
+</div>
+
+**Copyright © FOHEART Co., Ltd. 2015-2018. All rights reserved.**<br>
+
 # 绑定后的模型滑步/浮空或者脚部在地面下等问题如何解决？
 ## 一、问题分析
 在MotionVenus中，按照严格流程，需要详细准确测量人体每段骨骼的长度，填入【骨骼】参数后，再进行动作捕捉。然而为了方便，大部分情况下我们只选用内置模版，但是即使选择了与自身不完全匹配的尺寸模版，MotionVenus也能通过算法计算出没有漂移和滑步的位置信息。<br>
@@ -49,3 +82,7 @@
 ## 八、非正常比例骨骼模型如何处理？
 若在Unity3D中使用的模型已经制作完成不便更改，或者骨骼比例需要以一种夸张的比例设置，那么必须在动捕开始之前就在MotionVenus中提前设置夸张的长度或者比例，具体方法可以按照以下方式实现：<br>
 在MotionVenus中[身体参数设置](https://github.com/FOHEART/MotionVenusHelp/blob/v1.4.0/software/bodyparam.md)窗体中，详细设置大腿、小腿、脚长的数值，使之与Unity3D中需要绑定的模型保持长度一致，或者比例一致，然后穿戴动捕进行表演实时捕捉、或捕捉完成后回放数据。
+
+<div align=center>
+<img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/img/tail.png"/>
+</div>
