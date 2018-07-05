@@ -8,7 +8,7 @@ RIGHTS ARE RESERVED IN THE EVENT OF A PATENT GRANT OR
 REGISTRATION OF A UTILITY MODEL OR DESIGN.
 ### GENERAL NOTES
 FOHEART OFFERS THE INFORMATION AS A SERVICE TO ITS CUSTOMERS. 
-THE INFORMATION PROVIDED IS BASED UPON CUSTOMERSâ€™ 
+THE INFORMATION PROVIDED IS BASED UPON CUSTOMERS¡¯ 
 REQUIREMENTS. FOHEART MAKES EVERY EFFORT TO ENSURE THE 
 QUALITY OF THE INFORMATION IT MAKES AVAILABLE. FOHEART DOES 
 NOT MAKE ANY WARRANTY AS TO THE INFORMATION CONTAINED 
@@ -19,23 +19,23 @@ CHANGE WITHOUT PRIOR NOTICE.<br>
 **For technical support, please visit:**<br>
 [http://www.foheart.com/support.html](http://www.foheart.com/support.html) or<br>
 [http://www.foheart.com/question.html](http://www.foheart.com/question.html)<br>
-**åŒ—äº¬æ€»éƒ¨**<br>
-Telï¼š(+86)010-56106165<br>
-Emailï¼šcontact@foheart.com<br>
-åœ°å€ï¼šåŒ—äº¬å¸‚æµ·æ·€åŒºé»‘å±±æ‰ˆè·¯çº¢å±±å£8å·D2-å—-3å·<br>
-é‚®ç¼–ï¼š100091<br>
+**±±¾©×Ü²¿**<br>
+Tel£º(+86)010-56106165<br>
+Email£ºcontact@foheart.com<br>
+µØÖ·£º±±¾©ÊĞº£µíÇøºÚÉ½ìèÂ·ºìÉ½¿Ú8ºÅD2-ÄÏ-3ºÅ<br>
+ÓÊ±à£º100091<br>
 
 <div align=center>
 <img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/img/address1.png"/>
 </div>
 
-**Copyright Â© FOHEART Co., Ltd. 2015-2018. All rights reserved.**<br>
+**Copyright(C) FOHEART Co., Ltd. 2015-2018. All rights reserved.**<br>
 
-# ç»‘å®šå®ä¾‹1
-æ¨¡å‹ä¸‹è½½è‡ªUnityåœ¨çº¿å•†åŸã€‚<br>
-ä¸‹è½½åœ°å€ï¼š[Skeleton.7z](https://github.com/FOHEART/FOHEART_Unity3D_Plugin/blob/master/help/bindingexample1/Skeleton.7z)(ç›´æ¥å¤åˆ¶urlåˆ°ä¸‹è½½è½¯ä»¶)<br>
-è§£å‹åä½¿ç”¨**skeleton_static.FBX**æ–‡ä»¶ä½œä¸ºæ¼”ç¤ºã€‚<br>
+# Unity3DÄ£ĞÍ°ó¶¨ÊµÀı1
+Ä£ĞÍÏÂÔØ×ÔUnityÔÚÏßÉÌ³Ç¡£<br>
+ÏÂÔØµØÖ·£º[Skeleton.7z](https://github.com/FOHEART/FOHEART_Unity3D_Plugin/blob/master/help/bindingexample1/Skeleton.7z)(Ö±½Ó¸´ÖÆurlµ½ÏÂÔØÈí¼ş)<br>
+½âÑ¹ºóÊ¹ÓÃ**skeleton_static.FBX**ÎÄ¼ş×÷ÎªÑİÊ¾¡£<br>
 
 <div align=center>
-<img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/img/tail.png"/>
+<img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/img/tail.png" width="100%"/>
 </div>

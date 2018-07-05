@@ -8,7 +8,7 @@ RIGHTS ARE RESERVED IN THE EVENT OF A PATENT GRANT OR
 REGISTRATION OF A UTILITY MODEL OR DESIGN.
 ### GENERAL NOTES
 FOHEART OFFERS THE INFORMATION AS A SERVICE TO ITS CUSTOMERS. 
-THE INFORMATION PROVIDED IS BASED UPON CUSTOMERSâ€™ 
+THE INFORMATION PROVIDED IS BASED UPON CUSTOMERS¡¯ 
 REQUIREMENTS. FOHEART MAKES EVERY EFFORT TO ENSURE THE 
 QUALITY OF THE INFORMATION IT MAKES AVAILABLE. FOHEART DOES 
 NOT MAKE ANY WARRANTY AS TO THE INFORMATION CONTAINED 
@@ -19,43 +19,43 @@ CHANGE WITHOUT PRIOR NOTICE.<br>
 **For technical support, please visit:**<br>
 [http://www.foheart.com/support.html](http://www.foheart.com/support.html) or<br>
 [http://www.foheart.com/question.html](http://www.foheart.com/question.html)<br>
-**åŒ—äº¬æ€»éƒ¨**<br>
-Telï¼š(+86)010-56106165<br>
-Emailï¼šcontact@foheart.com<br>
-åœ°å€ï¼šåŒ—äº¬å¸‚æµ·æ·€åŒºé»‘å±±æ‰ˆè·¯çº¢å±±å£8å·D2-å—-3å·<br>
-é‚®ç¼–ï¼š100091<br>
+**±±¾©×Ü²¿**<br>
+Tel£º(+86)010-56106165<br>
+Email£ºcontact@foheart.com<br>
+µØÖ·£º±±¾©ÊÐº£µíÇøºÚÉ½ìèÂ·ºìÉ½¿Ú8ºÅD2-ÄÏ-3ºÅ<br>
+ÓÊ±à£º100091<br>
 
 <div align=center>
 <img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/img/address1.png"/>
 </div>
 
-**Copyright Â© FOHEART Co., Ltd. 2015-2018. All rights reserved.**<br>
+**Copyright(C) FOHEART Co., Ltd. 2015-2018. All rights reserved.**<br>
 
-# å¦‚ä½•ä½¿ç”¨Unity3Dåå‘æŽ§åˆ¶MotionVenusï¼Ÿ
-## ä¸€ã€ç®€ä»‹
-åœ¨æŸäº›é¢„å…ˆç¼–è¯‘å®Œæˆçš„Unity3Då·¥ç¨‹è¿è¡Œæ—¶ï¼Œä¸æ–¹ä¾¿åœ¨MotionVenusä¸ŽUnity3Dä¹‹é—´åå¤åˆ‡æ¢ï¼Œè¿™æ—¶å¯ä»¥ä½¿ç”¨æˆ‘ä»¬æä¾›çš„Unity3Dè„šæœ¬å®žçŽ°åå‘æŽ§åˆ¶MotionVenuså®Œæˆäººç‰©æ ¡å‡†åŠ¨ä½œã€‚
-## äºŒã€ä½¿ç”¨å‡†å¤‡
-ç©¿æˆ´å‡†å¤‡å¥½FOHEART C1å¥—è£…ï¼Œå¹¶æ‰“å¼€MotionVenusè½¯ä»¶ï¼Œå¯ä»¥çœ‹åˆ°å·¦ä¾§è®¾å¤‡æ å‡ºçŽ°å¥—è£…Actor1(Live)ï¼Œå¦‚ä¸‹ï¼š
+# ÈçºÎÊ¹ÓÃUnity3D·´Ïò¿ØÖÆMotionVenus£¿
+## Ò»¡¢¼ò½é
+ÔÚÄ³Ð©Ô¤ÏÈ±àÒëÍê³ÉµÄUnity3D¹¤³ÌÔËÐÐÊ±£¬²»·½±ãÔÚMotionVenusÓëUnity3DÖ®¼ä·´¸´ÇÐ»»£¬ÕâÊ±¿ÉÒÔÊ¹ÓÃÎÒÃÇÌá¹©µÄUnity3D½Å±¾ÊµÏÖ·´Ïò¿ØÖÆMotionVenusÍê³ÉÈËÎïÐ£×¼¶¯×÷¡£
+## ¶þ¡¢Ê¹ÓÃ×¼±¸
+´©´÷×¼±¸ºÃFOHEART C1Ì××°£¬²¢´ò¿ªMotionVenusÈí¼þ£¬¿ÉÒÔ¿´µ½×ó²àÉè±¸À¸³öÏÖÌ××°Actor1(Live)£¬ÈçÏÂ£º
 
 <div align=center>
 <img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/invCtl/devicelist.png"/>
 </div>
 
-## ä¸‰ã€Unity3Dç«¯é…ç½®
-ç‚¹å‡»è¿è¡ŒUnity3Då·¥ç¨‹ï¼Œåœ¨Edit_ActorNameæŽ§ä»¶ä¸­å¡«å…¥ç¬¬äºŒæ­¥ä¸­çš„å¥—è£…åç§°Actor1(Live)ï¼Œç„¶åŽç‚¹å‡»æ ¡å‡†æŒ‰é’®å¹¶ä¾ç…§æç¤ºåšå‡ºç›¸åº”æ ¡å‡†åŠ¨ä½œå³å¯ï¼š
+## Èý¡¢Unity3D¶ËÅäÖÃ
+µã»÷ÔËÐÐUnity3D¹¤³Ì£¬ÔÚEdit_ActorName¿Ø¼þÖÐÌîÈëµÚ¶þ²½ÖÐµÄÌ××°Ãû³ÆActor1(Live)£¬È»ºóµã»÷Ð£×¼°´Å¥²¢ÒÀÕÕÌáÊ¾×ö³öÏàÓ¦Ð£×¼¶¯×÷¼´¿É£º
 
 <div align=center>
-<img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/invCtl/config.png"/>
+<img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/invCtl/config.png" width="100%"/>
 </div>
 
-## å››ã€æ³¨æ„äº‹é¡¹
-éœ€è¦ç¡®ä¿Unity3Dä¸­çš„NetFrameDataReceiverä¸­çš„UDP_Target_IPä¸ŽUDP_Target_Portä¸Žè¿è¡ŒMotionVenusçš„ä¸»æœºçš„IPä¸Žç«¯å£ç›¸åŒã€‚å…¶ä¸­UDP_Target_Portåœ¨MotionVenusä¸­çš„è®¾ç½®->é€‰é¡¹->å‘½ä»¤æŽ¥æ”¶ä¸­é…ç½®ã€‚
+## ËÄ¡¢×¢ÒâÊÂÏî
+ÐèÒªÈ·±£Unity3DÖÐµÄNetFrameDataReceiverÖÐµÄUDP_Target_IPÓëUDP_Target_PortÓëÔËÐÐMotionVenusµÄÖ÷»úµÄIPÓë¶Ë¿ÚÏàÍ¬¡£ÆäÖÐUDP_Target_PortÔÚMotionVenusÖÐµÄÉèÖÃ->Ñ¡Ïî->ÃüÁî½ÓÊÕÖÐÅäÖÃ¡£
 
 <div align=center>
 <table>
-   <tr><th>é€‰é¡¹</th><th>åŠŸèƒ½</th></tr>
-   <tr><th>UDP_Target_IP</th><th>åå‘æŽ§åˆ¶MotionVenusï¼Œä»£è¡¨å¯¹æ–¹è¿è¡ŒMotionVenusçš„PCæœºçš„IPåœ°å€</th></tr>
-	<tr><th>UDP_Target_Port</th><th>åå‘æŽ§åˆ¶MotionVenusï¼Œä»£è¡¨å¯¹æ–¹è¿è¡ŒMotionVenusçš„PCæœºçš„Portç«¯å£</th></tr>
+   <tr><th>Ñ¡Ïî</th><th>¹¦ÄÜ</th></tr>
+   <tr><th>UDP_Target_IP</th><th>·´Ïò¿ØÖÆMotionVenus£¬´ú±í¶Ô·½ÔËÐÐMotionVenusµÄPC»úµÄIPµØÖ·</th></tr>
+	<tr><th>UDP_Target_Port</th><th>·´Ïò¿ØÖÆMotionVenus£¬´ú±í¶Ô·½ÔËÐÐMotionVenusµÄPC»úµÄPort¶Ë¿Ú</th></tr>
 
 
 </table>
@@ -66,5 +66,5 @@ Emailï¼šcontact@foheart.com<br>
 </div>
 
 <div align=center>
-<img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/img/tail.png"/>
+<img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/img/tail.png" width="100%"/>
 </div>

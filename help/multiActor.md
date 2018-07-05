@@ -8,7 +8,7 @@ RIGHTS ARE RESERVED IN THE EVENT OF A PATENT GRANT OR
 REGISTRATION OF A UTILITY MODEL OR DESIGN.
 ### GENERAL NOTES
 FOHEART OFFERS THE INFORMATION AS A SERVICE TO ITS CUSTOMERS. 
-THE INFORMATION PROVIDED IS BASED UPON CUSTOMERSâ€™ 
+THE INFORMATION PROVIDED IS BASED UPON CUSTOMERS¡¯ 
 REQUIREMENTS. FOHEART MAKES EVERY EFFORT TO ENSURE THE 
 QUALITY OF THE INFORMATION IT MAKES AVAILABLE. FOHEART DOES 
 NOT MAKE ANY WARRANTY AS TO THE INFORMATION CONTAINED 
@@ -19,69 +19,69 @@ CHANGE WITHOUT PRIOR NOTICE.<br>
 **For technical support, please visit:**<br>
 [http://www.foheart.com/support.html](http://www.foheart.com/support.html) or<br>
 [http://www.foheart.com/question.html](http://www.foheart.com/question.html)<br>
-**åŒ—äº¬æ€»éƒ¨**<br>
-Telï¼š(+86)010-56106165<br>
-Emailï¼šcontact@foheart.com<br>
-åœ°å€ï¼šåŒ—äº¬å¸‚æµ·æ·€åŒºé»‘å±±æ‰ˆè·¯çº¢å±±å£8å·D2-å—-3å·<br>
-é‚®ç¼–ï¼š100091<br>
+**±±¾©×Ü²¿**<br>
+Tel£º(+86)010-56106165<br>
+Email£ºcontact@foheart.com<br>
+µØÖ·£º±±¾©ÊÐº£µíÇøºÚÉ½ìèÂ·ºìÉ½¿Ú8ºÅD2-ÄÏ-3ºÅ<br>
+ÓÊ±à£º100091<br>
 
 <div align=center>
 <img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/img/address1.png"/>
 </div>
 
-**Copyright Â© FOHEART Co., Ltd. 2015-2018. All rights reserved.**<br>
+**Copyright(C) FOHEART Co., Ltd. 2015-2018. All rights reserved.**<br>
 
-# å¦‚ä½•ä½¿ç”¨MotionVenusé©±åŠ¨Unity3Dä¸­å¤šä¸ªæ¨¡åž‹è¿åŠ¨ï¼Ÿ
-## ä¸€ã€ä½¿ç”¨å‡†å¤‡
-MotionVenuså¯ä»¥å®žæ—¶æˆ–è€…ç¦»çº¿é©±åŠ¨Unity3Dä¸­çš„ä¸€ä¸ªæˆ–è€…å¤šä¸ªæ¨¡åž‹è¿åŠ¨ï¼ŒU3Dä¸­çš„æ¨¡åž‹å¯ä»¥å•ç‹¬è®¾ç½®èµ·å§‹ä½ç½®ã€å¤§å°ç¼©æ”¾ç­‰ã€‚
-## äºŒã€æ·»åŠ æ¨¡åž‹
-ä½œä¸ºæ¼”ç¤ºï¼Œè¿™é‡Œæˆ‘ä»¬æ·»åŠ ä¸€ä¸ªæ¨¡åž‹ï¼šFoActorRig2<br>
-ç»‘å®šè„šæœ¬FoheartModel.csï¼Œå¦‚ä¸‹ï¼š
+# ÈçºÎÊ¹ÓÃMotionVenusÇý¶¯Unity3DÖÐ¶à¸öÄ£ÐÍÔË¶¯£¿
+## Ò»¡¢Ê¹ÓÃ×¼±¸
+MotionVenus¿ÉÒÔÊµÊ±»òÕßÀëÏßÇý¶¯Unity3DÖÐµÄÒ»¸ö»òÕß¶à¸öÄ£ÐÍÔË¶¯£¬U3DÖÐµÄÄ£ÐÍ¿ÉÒÔµ¥¶ÀÉèÖÃÆðÊ¼Î»ÖÃ¡¢´óÐ¡Ëõ·ÅµÈ¡£
+## ¶þ¡¢Ìí¼ÓÄ£ÐÍ
+×÷ÎªÑÝÊ¾£¬ÕâÀïÎÒÃÇÌí¼ÓÒ»¸öÄ£ÐÍ£ºFoActorRig2<br>
+°ó¶¨½Å±¾FoheartModel.cs£¬ÈçÏÂ£º
 
 <div align=center>
-<img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/multiActor/addActor.png"/>
+<img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/multiActor/addActor.png" width="100%"/>
 </div>
 
-## ä¸‰ã€æ·»åŠ æŽ§åˆ¶åˆ—è¡¨
-åœ¨Canvas->Button_calibrationçš„æŽ§åˆ¶è„šæœ¬ä¸­ï¼Œå°†Player Listçš„Sizeæ”¹ä¸º2ï¼Œå¹¶é€‰ä¸­Element1çš„æŽ§åˆ¶å¯¹è±¡ä¸ºFoActorRig2ï¼Œå¦‚ä¸‹ï¼š
+## Èý¡¢Ìí¼Ó¿ØÖÆÁÐ±í
+ÔÚCanvas->Button_calibrationµÄ¿ØÖÆ½Å±¾ÖÐ£¬½«Player ListµÄSize¸ÄÎª2£¬²¢Ñ¡ÖÐElement1µÄ¿ØÖÆ¶ÔÏóÎªFoActorRig2£¬ÈçÏÂ£º
 
 <div align=center>
 <img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/multiActor/modifyList.png"/>
 </div>
 
-## å››ã€MotionVenusç«¯é…ç½®
-ä½œä¸ºæ¼”ç¤ºï¼Œè¿™é‡Œæˆ‘ä»¬æ‰“å¼€ä¸¤ä¸ªç¦»çº¿æ–‡ä»¶ï¼šï¼ˆ1ï¼‰NPC2 ï¼ˆ2ï¼‰wushu_3_30 å¦‚ä¸‹ï¼š
+## ËÄ¡¢MotionVenus¶ËÅäÖÃ
+×÷ÎªÑÝÊ¾£¬ÕâÀïÎÒÃÇ´ò¿ªÁ½¸öÀëÏßÎÄ¼þ£º£¨1£©NPC2 £¨2£©wushu_3_30 ÈçÏÂ£º
 
 <div align=center>
-<img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/multiActor/mvconfig.png"/>
+<img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/multiActor/mvconfig.png" width="100%"/>
 </div>
 
-## äº”ã€Unity3Dç«¯ç»‘å®š
-åœ¨è¿™é‡Œï¼Œæˆ‘ä»¬å‡è®¾ä½¿ç”¨NPC2æ•°æ®æµæŽ§åˆ¶FoActorRigè¿åŠ¨ï¼Œä½¿ç”¨wushu_3_30æŽ§åˆ¶FoActorRig2è¿åŠ¨ï¼Œé‚£ä¹ˆè®¾ç½®å¦‚ä¸‹ï¼š<br>
-ï¼ˆ1ï¼‰è®¾ç½®FoActorRigçš„è„šæœ¬ä¸­Actor Nameä¸º**NPC2**ã€‚<br>
-ï¼ˆ2ï¼‰è®¾ç½®FoActorRig2çš„è„šæœ¬ä¸­Actor Nameä¸º**wushu_3_30**ã€‚<br>
+## Îå¡¢Unity3D¶Ë°ó¶¨
+ÔÚÕâÀï£¬ÎÒÃÇ¼ÙÉèÊ¹ÓÃNPC2Êý¾ÝÁ÷¿ØÖÆFoActorRigÔË¶¯£¬Ê¹ÓÃwushu_3_30¿ØÖÆFoActorRig2ÔË¶¯£¬ÄÇÃ´ÉèÖÃÈçÏÂ£º<br>
+£¨1£©ÉèÖÃFoActorRigµÄ½Å±¾ÖÐActor NameÎª**NPC2**¡£<br>
+£¨2£©ÉèÖÃFoActorRig2µÄ½Å±¾ÖÐActor NameÎª**wushu_3_30**¡£<br>
 
 <div align=center>
-<img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/multiActor/rig1.png"/>
+<img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/multiActor/rig1.png" width="100%"/>
 </div>
 
 <div align=center>
-<img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/multiActor/rig2.png"/>
+<img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/multiActor/rig2.png" width="100%"/>
 </div>
 
-## å…­ã€è¿è¡Œ
-åœ¨MotionVenusç«¯ç‚¹å‡»æ’­æ”¾ï¼Œåœ¨Unity3Dç«¯ä¹Ÿç‚¹å‡»æ’­æ”¾ï¼Œåˆ™ä¸¤éƒ¨åˆ†éƒ½å¯ä»¥åŒæ­¥è¿åŠ¨ï¼Œå¦‚ä¸‹ï¼š
+## Áù¡¢ÔËÐÐ
+ÔÚMotionVenus¶Ëµã»÷²¥·Å£¬ÔÚUnity3D¶ËÒ²µã»÷²¥·Å£¬ÔòÁ½²¿·Ö¶¼¿ÉÒÔÍ¬²½ÔË¶¯£¬ÈçÏÂ£º
 
 <div align=center>
-<img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/multiActor/run.png"/>
+<img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/multiActor/run.png" width="100%"/>
 </div>
 
-## ä¸ƒã€Q&A:
-1. æœ€å¤šå¯ä»¥æŽ§åˆ¶å¤šå°‘ç»„æ¨¡åž‹è¿åŠ¨ï¼Ÿ<br>
-MotionVenusæœ€å¤šå¯ä»¥å‘é€4ç»„å®žæ—¶æ•°æ®æµã€æˆ–è€…5ç»„ç¦»çº¿æ•°æ®æµåˆ°Unity3Dã€‚ä½†æ˜¯åœ¨Unity3Dç«¯å¯ä»¥å°†å¤šä¸ªæ¨¡åž‹ç»‘å®šåˆ°ä¸€ç»„æ•°æ®æµä¸Šã€‚
-2. å¯ä»¥åˆ†åˆ«æŽ§åˆ¶æ¯ä¸ªæ¨¡åž‹çš„èµ·å§‹ä½ç½®ä¸Žå¤§å°å—ï¼Ÿ<br>
-å¯ä»¥ã€‚è®¾ç½®æ¯ä¸ªæ¨¡åž‹æŽ§åˆ¶è„šæœ¬ä¸­çš„**Location Offset XYZ**ä¸Ž**Location Scale XYZ**å®žçŽ°ã€‚
+## Æß¡¢Q&A:
+1. ×î¶à¿ÉÒÔ¿ØÖÆ¶àÉÙ×éÄ£ÐÍÔË¶¯£¿<br>
+MotionVenus×î¶à¿ÉÒÔ·¢ËÍ4×éÊµÊ±Êý¾ÝÁ÷¡¢»òÕß5×éÀëÏßÊý¾ÝÁ÷µ½Unity3D¡£µ«ÊÇÔÚUnity3D¶Ë¿ÉÒÔ½«¶à¸öÄ£ÐÍ°ó¶¨µ½Ò»×éÊý¾ÝÁ÷ÉÏ¡£
+2. ¿ÉÒÔ·Ö±ð¿ØÖÆÃ¿¸öÄ£ÐÍµÄÆðÊ¼Î»ÖÃÓë´óÐ¡Âð£¿<br>
+¿ÉÒÔ¡£ÉèÖÃÃ¿¸öÄ£ÐÍ¿ØÖÆ½Å±¾ÖÐµÄ**Location Offset XYZ**Óë**Location Scale XYZ**ÊµÏÖ¡£
 
 <div align=center>
-<img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/img/tail.png"/>
+<img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/img/tail.png" width="100%"/>
 </div>

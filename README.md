@@ -109,7 +109,7 @@ Email：contact@foheart.com<br>
 3. 创建一个任意一个2D或3D物体，在本工程中，我们创建一个容器Canvas，并在Canvas中添加按钮Button_calibration，并将NetFrameDataReceiver.cs放置到Canvas->Button_calibration上。
 
 <div align=center>
-<img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/img/addreceiver.png"/>
+<img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/img/addreceiver.png" width="100%"/>
 </div>
 
 完成第3步之后，在Canvas->Button_calibration的Inspector中会显示下面属性：
