@@ -10,7 +10,7 @@ RIGHTS ARE RESERVED IN THE EVENT OF A PATENT GRANT OR
 REGISTRATION OF A UTILITY MODEL OR DESIGN.
 ### GENERAL NOTES
 FOHEART OFFERS THE INFORMATION AS A SERVICE TO ITS CUSTOMERS. 
-THE INFORMATION PROVIDED IS BASED UPON CUSTOMERS�� 
+THE INFORMATION PROVIDED IS BASED UPON CUSTOMERS’ 
 REQUIREMENTS. FOHEART MAKES EVERY EFFORT TO ENSURE THE 
 QUALITY OF THE INFORMATION IT MAKES AVAILABLE. FOHEART DOES 
 NOT MAKE ANY WARRANTY AS TO THE INFORMATION CONTAINED 
@@ -21,11 +21,11 @@ CHANGE WITHOUT PRIOR NOTICE.<br>
 **For technical support, please visit:**<br>
 [http://www.foheart.com/support.html](http://www.foheart.com/support.html) or<br>
 [http://www.foheart.com/question.html](http://www.foheart.com/question.html)<br>
-**�����ܲ�**<br>
-Tel��(+86)010-56106165<br>
-Email��contact@foheart.com<br>
-��ַ�������к�������ɽ��·��ɽ��8��D2-��-3��<br>
-�ʱࣺ100091<br>
+**北京总部**<br>
+Tel：(+86)010-56106165<br>
+Email：contact@foheart.com<br>
+地址：北京市海淀区黑山扈路红山口8号D2-南-3号<br>
+邮编：100091<br>
 
 <div align=center>
 <img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/img/address1.png"/>
@@ -40,43 +40,43 @@ Email��contact@foheart.com<br>
 <img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/img/AssassinsCreedUnity.jpg"/>
 </div>
 
-# ǰ��
-���ֲ����ʵʱ����������Unity3Dģ���˶������������Ӳ���豸����MotionVenus������ʹ�������⣬��ο�MotionVenus������װĿ¼�µ�Help�ļ����µġ�FOHEART C1������װ������ʹ���ֲᡷ.pdf��
-��MotionVenus����û���ر�˵������ָ��FOHEART MotionVenus��������Ը��������κ������ֱ�ӵ����ʼ����������ǣ�motionvenus@foheart.com
-# һ�����ز����
-����һ���򿪹��� [http://www.foheart.com/resource.html](http://www.foheart.com/resource.html) ����Unity3D�����<br>
-��������git clone���⵽Ӳ������λ�ü��ɡ�<br>
-���غ����ǿ��Եõ������ļ���
+# 前言
+此手册介绍实时数据流驱动Unity3D模型运动，如果您对于硬件设备或者MotionVenus软件的使用有问题，请参看MotionVenus软件安装目录下的Help文件夹下的《FOHEART C1驱动安装与软件使用手册》.pdf。
+“MotionVenus”如没有特别说明，均指“FOHEART MotionVenus”。如果对该软件有任何问题可直接电子邮件反馈给我们：motionvenus@foheart.com
+# 一、下载插件包
+方法一：打开官网 [http://www.foheart.com/resource.html](http://www.foheart.com/resource.html) 下载Unity3D插件。<br>
+方法二：git clone本库到硬盘任意位置即可。<br>
+下载后我们可以得到以下文件：
 
 <div align=center>
 <img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/img/zip.png"/>
 </div>
 
-���ڰ汾����ԭ�򣬿����ļ���ͬ��
-# �����ļ����
-���ļ�Ŀ¼�У�����FHMCScript�ǲ���Ĵ��벿�֣�Template����ʾ��ģ�ͣ�**DefaltActor.xml**��ʾ��ģ�͵������ļ���
-## 2.1 FHMCScript��Ҫ�ļ����
-1. **NetFrameDataReceiver.cs**���ڽ�������MotionVenus��������������������Ҫ���䰲���ڳ������е�һ�����������������ϣ�2D��3D������ɣ��������½�һ��3D Object->Cube������Ϊ**NetworkReceiver**��**NetFrameDataReceiver.cs**�϶�����֮�ϡ����������й����У���Ҫ��NetworkReceiver�ٽ�������������������ֲ���Ԥ�ϵ��������⡣
-2. **FoheartModel.cs**���ڿ���ģ���˶��������϶�����Ҫ�����˶���������ģ��֮�ϼ��ɡ�
-3. **ActorFrameData.cs**�����ݽ����ļ�������Ҫ���в�����
-4. ���� .cs�ļ���һЩ���ƹ��ܵĽű��ļ���<br>
+由于版本更新原因，可能文件不同。
+# 二、文件简介
+在文件目录中，其中FHMCScript是插件的代码部分，Template中是示例模型，**DefaltActor.xml**是示例模型的配置文件。
+## 2.1 FHMCScript主要文件简介
+1. **NetFrameDataReceiver.cs**用于接收来自MotionVenus软件的网络数据流，需要将其安置在场景当中的一个单独的永久物体上（2D、3D物体均可），例如新建一个3D Object->Cube，命名为**NetworkReceiver**将**NetFrameDataReceiver.cs**拖动到它之上。在整个运行过程中，不要对NetworkReceiver再进行其它操作，以免出现不可预料的网络问题。
+2. **FoheartModel.cs**用于控制模型运动。将其拖动到需要控制运动的类人体模型之上即可。
+3. **ActorFrameData.cs**是数据解析文件，不需要进行操作。
+4. 其他 .cs文件是一些定制功能的脚本文件。<br>
 
-## 2.2 �����ļ�xml
-��������ļ����������������й����������û�����ģ�͹����İ󶨹�ϵ���������������������ת��λ�ƣ���������£�������Ҫ�Լ���д��������ļ������÷������յ������е����÷�����<br>
-������ʽ���£�<br>
+## 2.2 配置文件xml
+这个配置文件决定了网络数据中骨骼数据与用户骨骼模型骨骼的绑定关系，它决定了人体骨骼的旋转和位移，正常情况下，我们需要自己编写这个配置文件，配置方法参照第四章中的配置方法。<br>
+基本格式如下：<br>
 
 &lt;bone ConnectId = "0" name = "Hips" X="-Y" Y="-X" Z="-Z" XR="-90.0" YR="0.0" ZR="90.0"&gt;&lt;/bone&lt;
 
-Ĭ�ϵı�Ŷ�Ӧ�����������ϵ�ǣ�
-<center>��1�����������б�</center>
+默认的编号对应的人体骨骼关系是：
+<center>表1：完整骨骼列表</center>
 <div align=center>
 <table>
-   <tr><th>����</th><th>����</th><th>��ע</th></tr>
-   <tr><th>0</th><th>Spine��Hips</th><th>����ģ�͵ĸ��ڵ㣬�������������λ�ƺ͸��ؽڵ����ת</th></tr>
-	<tr><th>1</th><th>Spine1</th><th>�൱������L3~L5�ι���</th></tr>
-	<tr><th>2</th><th>Spine2</th><th>�൱������T12~L2�ι���</th></tr>
-	<tr><th>3</th><th>Spine3</th><th>�൱������T8~T11�ι���</th></tr>
-	<tr><th>4</th><th>Spine4</th><th>�൱������T1~T7�ι���</th></tr>
+   <tr><th>索引</th><th>名称</th><th>备注</th></tr>
+   <tr><th>0</th><th>Spine或Hips</th><th>类人模型的根节点，控制整个人体的位移和根关节点的旋转</th></tr>
+	<tr><th>1</th><th>Spine1</th><th>相当于人体L3~L5段骨骼</th></tr>
+	<tr><th>2</th><th>Spine2</th><th>相当于人体T12~L2段骨骼</th></tr>
+	<tr><th>3</th><th>Spine3</th><th>相当于人体T8~T11段骨骼</th></tr>
+	<tr><th>4</th><th>Spine4</th><th>相当于人体T1~T7段骨骼</th></tr>
 	<tr><th>5</th><th>Neck</th><th></th></tr>
 	<tr><th>6</th><th>Head</th><th></th></tr>
 	<tr><th>7</th><th>RightShoulder</th><th></th></tr>
@@ -90,159 +90,159 @@ Email��contact@foheart.com<br>
 	<tr><th>15</th><th>RightUpLeg</th><th></th></tr>
 	<tr><th>16</th><th>RightLeg</th><th></th></tr>
 	<tr><th>17</th><th>RightFoot</th><th></th></tr>
-	<tr><th>18</th><th>RightToeBase </th><th>���ֺ����ɵ�ǰ���Ʋ���</th></tr>
+	<tr><th>18</th><th>RightToeBase </th><th>五块趾骨组成的前脚掌部分</th></tr>
 	<tr><th>19</th><th>LeftUpLeg</th><th></th></tr>
 	<tr><th>20</th><th>LeftLeg</th><th></th></tr>
 	<tr><th>21</th><th>LeftFoot</th><th></th></tr>
-	<tr><th>22</th><th>LeftToeBase</th><th>���ֺ����ɵ�ǰ���Ʋ���</th></tr>
+	<tr><th>22</th><th>LeftToeBase</th><th>五块趾骨组成的前脚掌部分</th></tr>
 </table>
 </div>
 
-������ϸ�Ĺ�����������ʵλ�òο�ͼ���뿴[[����]](https://github.com/FOHEART/FOHEART_Unity3D_Plugin/blob/master/help/bonebindhelp.md)��
+更加详细的骨骼与人体真实位置参考图，请看[[这里]](https://github.com/FOHEART/FOHEART_Unity3D_Plugin/blob/master/help/bonebindhelp.md)。
 
-��Ҫ��ģ�͵Ķ�Ӧ����������д��xml�ļ���name���У����ɶ���ι���������ת���ơ�
+需要将模型的对应骨骼名称填写在xml文件的name栏中，即可对这段骨骼进行旋转控制。
 
-# �������ʹ������
-������ʹ������������Unity3D����������ģ�͵ľ��岽�裺<br>
-1. �½�һ��Unity���̣�����ʹ�����Լ��Ĺ��̡�<br>
-2. ��FHMCScript�ļ��п���������Ŀ¼��AssetsĿ¼�£���DefaltActor.xml ���������̸�Ŀ¼�¡�<br>
-3. ����һ������һ��2D��3D���壬�ڱ������У����Ǵ���һ������Canvas������Canvas�����Ӱ�ťButton_calibration������NetFrameDataReceiver.cs���õ�Canvas->Button_calibration�ϡ�
+# 三、插件使用流程
+下面是使动捕数据流在Unity3D中驱动任意模型的具体步骤：<br>
+1. 新建一个Unity工程，或是使用你自己的工程。<br>
+2. 将FHMCScript文件夹拷贝到工程目录的Assets目录下，将DefaltActor.xml 拷贝到工程根目录下。<br>
+3. 创建一个任意一个2D或3D物体，在本工程中，我们创建一个容器Canvas，并在Canvas中添加按钮Button_calibration，并将NetFrameDataReceiver.cs放置到Canvas->Button_calibration上。
 
 <div align=center>
 <img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/img/addreceiver.png" width="100%"/>
 </div>
 
-��ɵ�3��֮����Canvas->Button_calibration��Inspector�л���ʾ�������ԣ�
+完成第3步之后，在Canvas->Button_calibration的Inspector中会显示下面属性：
 
 <div align=center>
 <img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/img/bindreceiver.png"/>
 </div>
 
 
-���У�
+其中：
 
 <div align=center>
 <table>
-   <tr><th>ѡ��</th><th>����</th></tr>
-   <tr><th>UDP_Target_IP</th><th>�������MotionVenus�������Է�����MotionVenus��PC����IP��ַ</th></tr>
-	<tr><th>UDP_Target_Port</th><th>�������MotionVenus�������Է�����MotionVenus��PC����Port�˿�</th></tr>
-<tr><th>UDPPort</th><th>MotionVenus���Ʊ��������������󶨵Ķ˿ڣ���Ҫ��MotionVenus�е�������ͬ</th></tr>
-<tr><th>BonePosition</th><th>ʹ��ģ�͵�λ�ƣ�Ĭ��ʹ�ܣ�</th></tr>
-<tr><th>BoneEuler</th><th>ʹ��ŷ�������������˶���Ĭ��ʹ�ܣ�</th></tr>
-<tr><th>BoneQuat</th><th>ʹ����Ԫ�����������˶���Ĭ�ϲ�ʹ�ܣ�</th></tr>
-<tr><th>SensorAccel</th><th>����ԭʼ���ٶȼƵ����ֵ��Ĭ�ϲ�ʹ�ܣ�</th></tr>
-<tr><th>SensorGyro</th><th>����ԭʼ�����ǵ����ֵ��Ĭ�ϲ�ʹ�ܣ�</th></tr>
-<tr><th>SensorMag</th><th>����ԭʼ�����Ƶ����ֵ��Ĭ�ϲ�ʹ�ܣ�</th></tr>
+   <tr><th>选项</th><th>功能</th></tr>
+   <tr><th>UDP_Target_IP</th><th>反向控制MotionVenus，代表对方运行MotionVenus的PC机的IP地址</th></tr>
+	<tr><th>UDP_Target_Port</th><th>反向控制MotionVenus，代表对方运行MotionVenus的PC机的Port端口</th></tr>
+<tr><th>UDPPort</th><th>MotionVenus控制本机，代表本机绑定的端口，需要与MotionVenus中的设置相同</th></tr>
+<tr><th>BonePosition</th><th>使能模型的位移（默认使能）</th></tr>
+<tr><th>BoneEuler</th><th>使用欧拉角驱动骨骼运动（默认使能）</th></tr>
+<tr><th>BoneQuat</th><th>使用四元数驱动骨骼运动（默认不使能）</th></tr>
+<tr><th>SensorAccel</th><th>接收原始加速度计的输出值（默认不使能）</th></tr>
+<tr><th>SensorGyro</th><th>接收原始陀螺仪的输出值（默认不使能）</th></tr>
+<tr><th>SensorMag</th><th>接收原始磁力计的输出值（默认不使能）</th></tr>
 
 </table>
 </div>
 
-���У�UDPPort���趨��Ҫ��MotionVenus�е��趨��ͬ�������MotionVenus��û������Զ�̵�ַ��������IP��ַ��������Զ�̵�ַ��IP���ڶ˿�������Զ�̵�ַ�Ķ˿ڣ�Ȼ�������Ӱ�ť�������ַ�ͱ����ӵ��˷����б���
+其中，UDPPort的设定需要与MotionVenus中的设定相同，如果在MotionVenus中没有设置远程地址，可以在IP地址栏中输入远程地址的IP，在端口中输入远程地址的端口，然后点击添加按钮，这个地址就被添加到了发送列表。
 
 <div align=center>
 <img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/img/mvremoteipport.png"/>
 </div>
 
-BonePosition��BoneEuler��BoneQuat**MotionVenus**�е�ת������������λ�ơ�ŷ���ǡ���Ԫ����ѡ�񱣳�һ�£����磺
+BonePosition、BoneEuler、BoneQuat**MotionVenus**中的转发规则设置中位移、欧拉角、四元数的选择保持一致，例如：
 
 <div align=center>
 <img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/img/mvtransrule.png"/>
 </div>
 
-5. ��Template�ļ����е�FoActorRig.fbx�Ϸŵ������У���������FoheartModel.csΪComponent��������ʾ���£�
+5. 将Template文件夹中的FoActorRig.fbx拖放到场景中，并且添加FoheartModel.cs为Component，最终显示如下：
 
 <div align=center>
 <img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/img/bindmodel.png" width="100%"/>
 </div>
 
-����ActorName��Ҫ��MotionVenus�ж�Ӧ������**��װ���**һ�£�����������һ�׵���װ�����**Actor1(Live)**��
+其中ActorName需要与MotionVenus中对应的人物**套装编号**一致，例如下面这一套的套装编号是**Actor1(Live)**。
 
 <div align=center>
 <img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/img/actorname.png"/>
 </div>
 
-��ConfigName��Ҫ�빤�̸�Ŀ¼���xml�����ļ�����һ�¡�<br>
-Ȼ��ѡ��NetworkReceiver����ActorList��Size��Ϊ1�����Element 0�Ҳ�ѡ��ť���ڵ����Ĵ�����ѡ��ղ����úõ�FoActorRig��
+而ConfigName需要与工程根目录里的xml配置文件名称一致。<br>
+然后选择NetworkReceiver，将ActorList中Size设为1，点击Element 0右侧选择按钮，在弹出的窗口中选择刚才设置好的FoActorRig。
 
 <div align=center>
 <img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/img/addtoactorlist.png"/>
 </div>
 
-�������֮�����£�
+设置完成之后如下：
 
 <div align=center>
 <img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/img/addactorlistsuccess.png"/>
 </div>
 
-�����MotionVenus�������ж����豸��������ֻ��Ҫ��Size��Ϊ�豸��Ŀ��Ȼ������ѡ���豸��Ҫ�󶨵�Model����������Ϊ����������Model��
+如果在MotionVenus中连接有多套设备，在这里只需要将Size设为设备数目，然后依次选择设备需要绑定的Model，例如下面为添加了两个Model：
 
 <div align=center>
 <img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/img/multisuits.png"/>
 </div>
 
-6. ���������У׼��������ʱģ����MotionVenus�оͿ����������˶������ˡ�
+6. 穿戴并完成校准动作，此时模型在MotionVenus中就可以正常的运动起来了。
 
-# �ġ�ģ�Ͱ�
-�����ڽ�ģ������ʹ�õ�3D��ģ������ͬ�������ڽ�ģ������û��ʹ�������Ƽ��Ĺ���ϵͳ���ͻ���ɹ�������ϵ�Ĳ�ͳһ������Ĺ������ǽ�������ת��������ϵ����Ĺ���ϵͳʹ�ö���������������
-## 4.1 Ĭ����������ʽ
-MotionVenusʹ�������ʽ������������������̬λ����Ϣ��
+# 四、模型绑定
+由于在建模过程中使用的3D建模软件不同，或者在建模过程中没有使用软件推荐的骨骼系统，就会造成骨骼坐标系的不统一，这里的工作就是将任意旋转任意坐标系朝向的骨骼系统使用动捕数据流驱动。
+## 4.1 默认数据流格式
+MotionVenus使用下面格式的数据流输出人物的姿态位置信息：
 
 <div align=center>
 <img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/img/stream.png"/>
 </div>
 
-## 4.2 Ĭ������ϵ����
-��MotionVenus�е�����ϵ�������£�
+## 4.2 默认坐标系定义
+在MotionVenus中的坐标系定义如下：
 
 <div align=center>
 <img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/img/skeletoncoord.png" width="100%"/>
 </div>
 
-��MotionVenusʹ����������ϵ��<br>
-��T-Poseʱ���й����������ᶨ�嶼Ϊ���ֱ�Ϊx�ᣨ��ɫ�ᣩ���Ϸ�Ϊz�ᣨ��ɫ�ᣩ�������Ϊy�ᣨ��ɫ�ᣩ��������������ǹ�������������ϵ����������ϵ���е���ת������λ��Ҳ������������ϵ�е�λ�ơ�<br>
-������ϸ������ϵ�������[�����ӡ�](https://github.com/FOHEART/MotionVenusHelp/blob/v1.4.0/software/coordsystem.md)��
+即MotionVenus使用右手坐标系。<br>
+在T-Pose时所有骨骼的坐标轴定义都为左手边为x轴（红色轴），上方为z轴（蓝色轴），身体后方为y轴（绿色轴），数据流输出的是骨骼在世界坐标系（右手坐标系）中的旋转，骨骼位移也是在世界坐标系中的位移。<br>
+更加详细的坐标系解释请见[【链接】](https://github.com/FOHEART/MotionVenusHelp/blob/v1.4.0/software/coordsystem.md)。
 
-## 4.3 ��תת��ԭ��
+## 4.3 旋转转换原理
 
 <div align=center>
 <img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/img/leftrighthand.png"/>
 </div>
 
-��Unity3D�е�����ϵΪ��������ϵ��������ͼ�е��֣����ͬ����y����ת90�ȣ��������ת����Ļ�⣬���Ҳ���ת����Ļ�����������Ҳ������ͬ�����⣬���������ͬһ�ι�����MotionVenus�е���ת��U3D�е���ת����һ�£�������������Ҫ�ֶ��������ֲ�ͬ����ϵ��ɵ���ת�任��<br>
-����첲Ϊ������Unity3D��������ѡ����ʾ��첲��Local����ϵ��<br>
-����첲��U3D����+x����ת����U3D��Ϊ+x������MotionVenus��Ҫ��ﵽͬ��Ч��ҲΪ+x����Ϊ��������ת����ͬ������U3D����+y����ת����MotionVenus��Ҫ��ﵽͬ��Ч��Ϊ��-y����ת��z��Ĺ���Ҳ��ͬ��
+在Unity3D中的坐标系为左手坐标系，例如上图中的手，如果同样沿y轴旋转90度，则左侧手转向屏幕外，而右侧手转向屏幕里，其它两个轴也存在相同的问题，这样会造成同一段骨骼在MotionVenus中的旋转和U3D中的旋转现象不一致，在这里我们需要手动纠正这种不同坐标系造成的旋转变换。<br>
+以左胳膊为例，在Unity3D工具栏中选择显示左胳膊的Local坐标系。<br>
+例如胳膊在U3D中沿+x轴旋转，在U3D中为+x，而在MotionVenus中要想达到同样效果也为+x（因为左右手旋转规则不同）；在U3D中沿+y轴旋转，在MotionVenus中要想达到同样效果为沿-y轴旋转；z轴的规则也相同。
 
 <div align=center>
 <img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/img/axiscompare.png"/>
 </div>
 
-������FoheartModel.cs��applyBoneRotations�����У�����첲����ת����Ϊ��
+所以在FoheartModel.cs中applyBoneRotations函数中，对左胳膊的旋转设置为：
 
 &lt;bone ConnectId = "12" name = "LeftArm" X="X" Y="-Y" Z="-Z" XR="0.0" YR="0.0" ZR="0.0"&gt;&lt;/bone&gt;
 
-�������жι��������þ�������ͬ������
-## 4.4 ģ�Ͱ�
-ʹ������3D��ģ���߹�������������˹���ģ�;���ʹ��MotionVenus������������<br>
-MotionVenus���������Ĺ�����׼Ϊ����2.2����[��1]���еĹ�����Ŀ�����Ϊ23�Ρ���Ȼ��Ҳ�������������������23�ι���������ģ�͡������������ö��ǿ���ʵ�ֵģ�
-- �輰�貿���ϵ��ϰ����˶���
-- �輰�貿���µ��°����˶���
-- �����ĵ����˶���
-- �����ĵ����˶���
-- ������ͷ���˶���
-### 4.4.1 ��ģ����
-��MotionVenus�У���ģ��T-POSEΪ��ʼ��ת���ÿ�ι�������ڸ���������ԣ�Local����תֵ����������������ȫ�֣�Global����תֵ�������ڽ�ģ������Ƥʱ������ʹ��T-Pose���н�ģ��Ҫ��֤��T-Poseʱģ�ͼ粿�����������������<br>
-[[ʲô��T-Pose?]](http://manual.reallusion.com/3DXchange_6/ENU/Pipeline/04_Modify_Page/Character_Section/Manually_Setting_T_Pose.htm)��[[pdf]](https://github.com/FOHEART/FOHEART_Unity3D_Plugin/blob/master/help/Manually_Setting_T-Pose.pdf)(ֱ�Ӹ���url����������)<br>
-[[Ϊʲôʹ��T-Pose?]](https://github.com/FOHEART/FOHEART_Unity3D_Plugin/blob/master/help/whytpose.md)
+其它所有段骨骼的设置均遵守相同方法。
+## 4.4 模型绑定
+使用任意3D建模工具构建的人体或类人骨骼模型均可使用MotionVenus数据流驱动。<br>
+MotionVenus可以驱动的骨骼标准为本文2.2节中[表1]所列的骨骼数目，最大为23段。当然，也可灵活配置以驱动少于23段骨骼的类人模型。例如以下配置都是可以实现的：
+- 胯及胯部以上的上半身运动。
+- 胯及胯部以下的下半身运动。
+- 单独的单臂运动。
+- 单独的单腿运动。
+- 单独的头部运动。
+### 4.4.1 建模建议
+在MotionVenus中，以模型T-POSE为起始旋转输出每段骨骼相对于父骨骼的相对（Local）旋转值或相对于世界坐标的全局（Global）旋转值。所以在建模及绑定蒙皮时，建议使用T-Pose进行建模，要保证在T-Pose时模型肩部无耸起、拉扯等情况。<br>
+[[什么是T-Pose?]](http://manual.reallusion.com/3DXchange_6/ENU/Pipeline/04_Modify_Page/Character_Section/Manually_Setting_T_Pose.htm)或[[pdf]](https://github.com/FOHEART/FOHEART_Unity3D_Plugin/blob/master/help/Manually_Setting_T-Pose.pdf)(直接复制url到下载软件)<br>
+[[为什么使用T-Pose?]](https://github.com/FOHEART/FOHEART_Unity3D_Plugin/blob/master/help/whytpose.md)
 
-### 4.4.2 �����ļ�˵��
-ÿһ����Ҫ�����˶���ģ�ͣ���������FoheartModel.cs�ű�֮����ҪΨһ��һ��xml�����ļ�������ͼ��
+### 4.4.2 配置文件说明
+每一个需要控制运动的模型，当添加完FoheartModel.cs脚本之后，需要唯一绑定一个xml配置文件，如下图：
 
 <div align=center>
 <img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/img/configfile.png"/>
 </div>
 
-�������ļ�Ĭ��λ��ΪUnity3D���̵ĸ�Ŀ¼��<br>
-Ĭ�������ļ�DefaultActor.xml���������£�
+该配置文件默认位置为Unity3D工程的根目录。<br>
+默认配置文件DefaultActor.xml的内容如下：
 > &lt;?xml version="1.0" encoding="utf-8"?&gt;
 > 
 > &lt;!--
@@ -285,56 +285,57 @@ MotionVenus���������Ĺ�����׼Ϊ����2.2����[��1]���еĹ�����Ŀ�����Ϊ23�Ρ���Ȼ�
 > &lt;/ActorBones&gt;
 
 
-���У�
+其中：
 
 <div align=center>
 <table>
-   <tr><th>�ֶ�����</th><th>����</th></tr>
-   <tr><th>ConnectId</th><th>���ƹ���������</th></tr>
-	<tr><th>name</th><th>������U3D�е�����</th></tr>
-	<tr><th>X Y Z</th><th>����Local����ϵ��MotionVenus��������ϵ�ı任��ϵ</th></tr>
-<tr><th>XR YR ZR</th><th>������T-POSEʱ�ĳ�ʼ��̬�ǣ�Local����ϵ�£�</th></tr>
+   <tr><th>字段名称</th><th>功能</th></tr>
+   <tr><th>ConnectId</th><th>控制骨骼的索引</th></tr>
+	<tr><th>name</th><th>骨骼在U3D中的名字</th></tr>
+	<tr><th>X Y Z</th><th>骨骼Local坐标系与MotionVenus右手坐标系的变换关系</th></tr>
+<tr><th>XR YR ZR</th><th>骨骼在T-POSE时的初始姿态角（Local坐标系下）</th></tr>
 </table>
 </div>
 
-��ģ�Ͳ�������23�ι��������ʵ�ɾ�������ڵ�ĳ�ι����������С���ConnectIdΪ0�Ĺ�����Ϊ�������ṩ����ģ�͵Ŀռ�λ�ƣ�����ɾ����
-### 4.4.3 ��һ��������ģ��ΪT-POSE
-������Ҫ������ģ�͵���ΪT-POSE��ֱ�����й��������������״�档<br>
-Ҫ�㣺�ڵ��������У���Ҫ������ϵϵͳ����ΪLocal����ͬʱ�۲���T-POSEʱÿ�ι�������̬�ǣ���ģ�ͷ���4.4.1���еĽ�ģ���飬��ʱÿ�ι�������̬��ӦΪ0�㡢��90����180������֮һ��
-### 4.4.4 �ڶ�����д�������
-����Ҫ���ƵĹ�������д��xml�ļ��е�name���У���ȷ����Ӧ��λ��ȷ������ͼ��ʾ��
+若模型并不满足23段骨骼，可适当删除不存在的某段骨骼代表的行。但ConnectId为0的骨骼作为根骨骼提供整个模型的空间位移，不可删除。
+### 4.4.3 第一步：调整模型为T-POSE
+首先需要将导入模型调整为T-POSE，直到所有骨骼都落在人体冠状面。<br>
+要点：在调整过程中，需要将坐标系系统调整为Local，并同时观察在T-POSE时每段骨骼的姿态角，若模型符合4.4.1节中的建模建议，此时每段骨骼的姿态角应为0°、±90°或±180°其中之一。<br>
+其中，比较特殊的骨骼有脚尖与脚掌，在建模阶段，脚掌与小腿的角度一般为**45度或60度**，而脚掌与脚尖的角度一般为**45度或30度**。
+### 4.4.4 第二步：写入骨骼名
+将需要控制的骨骼名称写入xml文件中的name栏中，并确定对应部位正确。如下图所示：
 
 <div align=center>
 <img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/img/namelink.jpg" width="100%"/>
 </div>
 
-### 4.4.5 ��������д���ʼ�Ƕ�
-��T-POSE�е�ÿ�ι����ĳ�ʼ��̬�ǣ����������Ӧ�������ļ����С�Ҳ���������ļ��ж�Ӧ���е�XR YR ZRֵ������ͼ��ʾ��
+### 4.4.5 第三步：写入初始角度
+将T-POSE中的每段骨骼的初始姿态角，填入与其对应的配置文件行中。也就是配置文件中对应行中的XR YR ZR值。如下图所示：
 
-<center>Ĭ��ģ�����ã������ο�</center>
+<center>默认模型配置，仅供参考</center>
 
 <div align=center>
 <img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/img/xryrzr.jpg" width="100%"/>
 </div>
 
-���磺ѡ����磬ѡ��Local����ϵ�����ʼ�Ƕ�Ϊ(0,-90,180)��
+例如：选中左肩，选择Local坐标系，其初始角度为(0,-90,180)：
 
 <div align=center>
 <img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/img/leftshoulderangle.png" width="100%"/>
 </div>
 
-��������xml�ļ��д��������У��õ���
+将其填入xml文件中代表左肩的行，得到：
 >   &lt;bone ConnectId = "11" name = "LeftShoulder" X="X" Y="-Y" Z="-Z" XR="0.0" YR="-90.0" ZR="180.0"&gt;&lt;/bone&gt;
 
-### 4.4.6 ���Ĳ���ȷ����ת˳��
-ѡ��ÿ�ι�����Local���꣬����ͼ��A11~A64���ҵ���֮��ȫ��Ӧ����ת˳��
+### 4.4.6 第四步：确定旋转顺序
+选择每段骨骼的Local坐标，在下图中A11~A64中找到与之完全对应的旋转顺序：
 
 <div align=center>
 <img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/img/skeletoncoord.jpg" width="100%"/>
 </div>
 
-���ְ棺
-<center>��2��������ʼ������</center>
+文字版：
+<center>表2：骨骼初始坐标轴</center>
 
 <div align=center>
 <table>
@@ -347,52 +348,52 @@ MotionVenus���������Ĺ�����׼Ϊ����2.2����[��1]���еĹ�����Ŀ�����Ϊ23�Ρ���Ȼ�
 </table>
 </div>
 
-����ӦAxx�Ҳ�������X="?" Y="?" Z="?"�����Ӧ�������ļ����е���Ӧλ�ã�
+将对应Axx右侧所附的X="?" Y="?" Z="?"填入对应的配置文件行中的相应位置：
 
 <div align=center>
 <img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/img/coordlink.jpg" width="100%"/>
 </div>
 
-���磺ѡ����С�ȣ�ѡ��Local����ϵ���ҵ���֮��ȫ��ͬ����ת˳��A34������ת˳���ʾΪ��X="-Z" Y="Y" Z="X"��
+例如：选中右小腿，选择Local坐标系，找到与之完全相同的旋转顺序A34，则旋转顺序表示为：X="-Z" Y="Y" Z="X"：
 
 <div align=center>
 <img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/img/rightlegexample.jpg" width="100%"/>
 </div>
 
-��������xml�ļ��д�����С�ȵ��У��õ���
+将其填入xml文件中代表右小腿的行，得到：
 >   &lt;bone ConnectId = "16" name = "RightLeg" **X="-Z" Y="Y" Z="X"** XR="0.0" YR="0.0" ZR="0.0"&gt;&lt;/bone&gt;
 
-### 4.4.7 ת��ʵ��
-[��ʵ��1��](https://github.com/FOHEART/FOHEART_Unity3D_Plugin/blob/master/help/bindingexample1.md)
-### 4.4.8 ���ڹ��̴��
-Unity���̱���������exe֮���轫ģ�Ͱ󶨵�xml�ļ����õ���.exe��ͬ��Ŀ¼�£�һ���ǹ��̸�Ŀ¼��
+### 4.4.7 转换实例
+[【实例1】](https://github.com/FOHEART/FOHEART_Unity3D_Plugin/blob/master/help/bindingexample1.md)
+### 4.4.8 关于工程打包
+Unity工程编译打包生成exe之后，需将模型绑定的xml文件放置到与.exe相同的目录下，一般是工程根目录。
 
-# �塢����ʹ�ý̳�
-1. ��ΰ󶨲��������ģ���˶���<br>
-��ϸ�̳������[�����ӡ�](https://github.com/FOHEART/FOHEART_Unity3D_Plugin/blob/master/help/multiActor.md)
+# 五、其它使用教程
+1. 如何绑定并驱动多个模型运动？<br>
+详细教程请见：[【链接】](https://github.com/FOHEART/FOHEART_Unity3D_Plugin/blob/master/help/multiActor.md)
 
-2. ���ʹ��Unity3D�������MotionVenus��<br>
-��ϸ�̳������[�����ӡ�](https://github.com/FOHEART/FOHEART_Unity3D_Plugin/blob/master/help/invCtl.md)
+2. 如何使用Unity3D反向控制MotionVenus？<br>
+详细教程请见：[【链接】](https://github.com/FOHEART/FOHEART_Unity3D_Plugin/blob/master/help/invCtl.md)
 
-3. �󶨺��ģ�ͻ���/���ջ��߽Ų��ڵ����µ�������ν����<br>
-��ϸ�̳������[�����ӡ�](https://github.com/FOHEART/FOHEART_Unity3D_Plugin/blob/master/help/footslide.md)
+3. 绑定后的模型滑步/浮空或者脚部在地面下等问题如何解决？<br>
+详细教程请见：[【链接】](https://github.com/FOHEART/FOHEART_Unity3D_Plugin/blob/master/help/footslide.md)
 
-# ����ע������
-���ʹ��ʱ����Ҫע�����µط���
-1. ��ģ�Ͱ󶨹����У���Ҫ���Ƚ�ģ�͵�������׼��T���ƣ������������泯��Unity3D��Z��������
-2. ʹ��Unity3D�Ĺ�����MotionVenus������С����
+# 六、注意事项
+插件使用时，需要注意以下地方：
+1. 在模型绑定过程中，需要首先将模型调整到标准的T姿势，并且人物正面朝向Unity3D的Z轴正方向。
+2. 使用Unity3D的过程中MotionVenus不可最小化。
 
-# �ߡ�Q&A
-1. ���ģ�͵Ĺ�����Ŀ����23�Σ����米��������5����β�����<br>
-��Ҫ�����������е�ĳ���κ�Ϊһ�ο��ƣ�������Unity3D����ת����������������е��ӽڵ���ת������ֻ��Ҫ���������������xml�ļ��м��ɣ����Ҫ��֤���й�����ĿС�ڵ���23�Ρ�
-2. ���ģ�͵Ĺ�����ĿС��23�Σ����米������ֻ��2����β�����<br>
-�������������Ҫȥ��xml�ļ��в���Ҫ�����������Ǳ���Ҫ����Hips��Spine�ڵ㣬��Ϊ����ڵ㻹��������ģ�͵�λ�ã����ȥ������ģ�;Ͳ����˶����������£�
+# 七、Q&A
+1. 如果模型的骨骼数目大于23段，比如背部骨骼有5段如何操作？<br>
+需要将背部骨骼中的某两段合为一段控制，由于在Unity3D中旋转父骨骼会带动它所有的子节点旋转，所以只需要将父骨骼的名称填到xml文件中即可，最后要保证所有骨骼数目小于等于23段。
+2. 如果模型的骨骼数目小于23段，比如背部骨骼只有2段如何操作？<br>
+在这种情况下需要去掉xml文件中不需要的索引，但是必须要留下Hips或Spine节点，因为这个节点还控制整个模型的位置，如果去掉整个模型就不会运动。例如以下：
 
 &lt;bone ConnectId="0" name="Hips X="-Y" Y="-X" Z="-Z" XR="-90.0" YR="0.0" ZR="90.0"&gt;&lt;/bone&gt;
 
 &lt;bone ConnectId="3" name="Spine1" X="Z" Y="Y" Z="-X" XR="0.0" YR="0.0" ZR="0.0"&gt;&lt;/bone&gt;
 
-����������ȥ����1 2 4�����ι�������Ϊģ����û�������ι��������Ҳ���൱���ñ�׼ģ�͵�T8~T11�ι����˶�������ģ�͵�Spine1�ι����˶�����ȻҲ����ʹ������1��2�����ģ�͵�Spine1�ι����ȽϿ��½ӽ��貿����4�����ģ�͵�Spine1�ι����ȽϿ��Ͻӽ�����������Ҫ����ʵ�����������<br>
+在这里首先去掉了1 2 4这三段骨骼，因为模型中没有这三段骨骼，因此也就相当于用标准模型的T8~T11段骨骼运动代替了模型的Spine1段骨骼运动，当然也可以使用索引1或2（如果模型的Spine1段骨骼比较靠下接近胯部）或4（如果模型的Spine1段骨骼比较靠上接近颈部），需要根据实际情况而定。<br>
 
 <div align=center>
 <img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/img/tail.png" width="100%"/>
