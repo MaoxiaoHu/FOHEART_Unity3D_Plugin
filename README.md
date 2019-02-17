@@ -31,7 +31,7 @@ Email：contact@foheart.com<br>
 <img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/img/address1.png"/>
 </div>
 
-**Copyright(C) FOHEART Co., Ltd. 2015-2018. All rights reserved.**<br>
+**Copyright(C) FOHEART Co., Ltd. 2015-2019. All rights reserved.**<br>
 
 <div align=center>
 <img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/img/softwareName.png"/>
