@@ -39,7 +39,8 @@ Email：contact@foheart.com<br>
 <div align=center>
 <img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/img/AssassinsCreedUnity.jpg"/>
 </div>
-# 视频教程：<br> #
+
+# 视频教程：
 （一）插件下载与配置：[优酷链接 点击播放](http://v.youku.com/v_show/id_XNDA2Mzg0NzA3Ng==.html)<br>
 （二）同时驱动多个人物模型运动：[优酷链接 点击播放](http://v.youku.com/v_show/id_XNDA2MzgyMzc2OA==.html?spm=a2hzp.8244740.0.0)<br>
 （三）模型绑定教程：[优酷链接 点击播放](http://v.youku.com/v_show/id_XNDA2NzI3OTM0MA==.html?spm=a2h0j.11185381.listitem_page1.5~A)
