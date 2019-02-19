@@ -39,7 +39,10 @@ Email：contact@foheart.com<br>
 <div align=center>
 <img src="https://raw.githubusercontent.com/FOHEART/FOHEART_Unity3D_Plugin/master/help/img/AssassinsCreedUnity.jpg"/>
 </div>
-
+# 视频教程：<br> #
+（一）插件下载与配置：[优酷链接 点击播放](http://v.youku.com/v_show/id_XNDA2Mzg0NzA3Ng==.html)<br>
+（二）同时驱动多个人物模型运动：[优酷链接 点击播放](http://v.youku.com/v_show/id_XNDA2MzgyMzc2OA==.html?spm=a2hzp.8244740.0.0)<br>
+（三）模型绑定教程：[优酷链接 点击播放](http://v.youku.com/v_show/id_XNDA2NzI3OTM0MA==.html?spm=a2h0j.11185381.listitem_page1.5~A)
 # 前言
 此手册介绍实时数据流驱动Unity3D模型运动，如果您对于硬件设备或者MotionVenus软件的使用有问题，请参看MotionVenus软件安装目录下的Help文件夹下的《FOHEART C1驱动安装与软件使用手册》.pdf。
 “MotionVenus”如没有特别说明，均指“FOHEART MotionVenus”。如果对该软件有任何问题可直接电子邮件反馈给我们：motionvenus@foheart.com
